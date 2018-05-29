@@ -1,0 +1,26 @@
+site_name: Citrix StoreFront Store Services API
+site_description: Citrix StoreFront Store Services API
+theme_dir: citrix-sdk
+use_directory_urls: True
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+     anchorlink: True
+pages:
+
+- Scope: index.md
+- General Behavior: general-behavior.md
+- Resource Enumeration: resource-enumeration.md
+- Launch: launch.md
+- Images and Icons: images-and-icons.md
+- Machine Power Off: machine-power-off.md
+- Rade Service: rade-service.md
+- Subscriptions Service: subscriptions-service.md
+- Citrix-Online Integration Feature (Generic Applications): citrix-online-integration-feature.md
+- Sessions Service: sessions-service.md
+- Assign Desktop Service: assign-desktop-service.md
+- Endpoints Service: endpoints-service.md
+- Discovery Service: discovery-service.md
+- Accounts Service: accounts-service.md
+- Appendix: appendix.md
