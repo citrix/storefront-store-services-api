@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Assign Desktop Service - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Assign Desktop Service";
+      var mkdocs_page_input_path = "assign-desktop-service.md";
+      var mkdocs_page_url = "/assign-desktop-service/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Assign Desktop Service</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#assign-desktop-service" style="padding:0px;position: relative;">&nbsp;Assign Desktop Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#response-error-codes" style="padding:0px;position: relative;">Response Error Codes</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Assign Desktop Service</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="assign-desktop-service"><a class="toclink" href="#assign-desktop-service">Assign Desktop Service</a></h1>
+<p>This service allows a desktop to be assigned to a particular user (the user is identified by the security token in the request.</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<p>This service allows a desktop to be assigned to a particular user (the user is identified by the security token in the request.</p>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only) and Content-Type</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/{resourceId}/assigndesktop Application/vnd.citrix.assigndesktop+xml</td>
+<td>POST</td>
+<td>Assigns the desktop indicated by the resourceId.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The URLs given above are for illustrative purposes only. The actual URL used in a request should be obtained from the
+results of an enumeration request (eg /resources/v2/ or /resources/v2/{id}).
+<br><strong>Request data</strong></li>
+<li>The POSTed requests are Xml, described by the schema: /Schemas/AssignDesktopParams.xsd, with top level element assigndesktopparams.</li>
+</ul>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code (and friendly name)</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 (OK)</td>
+<td>The desktop assignment operation has been attempted and the response xml document (Content-Type: application/vnd.citrix.assigndekstop+xml) indicates whether the operation succeeded.<br>The response xml document is described by the schema /Schemas/AssignDesktop.xsd.</td>
+<td></td>
+</tr>
+<tr>
+<td>404 (Not Found)</td>
+<td>The specified resource does not support the assign operation.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="response-error-codes"><a class="toclink" href="#response-error-codes">Response Error Codes</a></h2>
+<p>The following error codes can be returned for errors in assigning a desktop:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no-available-workstation</td>
+<td>No VDAs are available to process this request.</td>
+<td></td>
+</tr>
+<tr>
+<td>connection-refused</td>
+<td>The server refused a connection.</td>
+<td></td>
+</tr>
+<tr>
+<td>resource-unavailable</td>
+<td>The desktop is no longer available to the user.</td>
+<td></td>
+</tr>
+<tr>
+<td>unspecified</td>
+<td>Unspecified error.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-assign-desktop-success"><a class="toclink" href="#example-assign-desktop-success">Example: Assign Desktop Success</a></h3>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/Q2l0cm...Q-/assigndesktop HTTP/1.1 Authorization: CitrixAuth H4sIA....
+Host: www.example.com
+Accepts: application/vnd.citrix.assigndesktop+xml,
+Content-Type: application/vnd.citrix.assigndesktopparams+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;assigndesktopparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/assigndesktopparams&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;clientAddress&gt;</span>10.70.0.123<span class="nt">&lt;/clientAddress&gt;</span> <span class="nt">&lt;/subscriptionUpdate&gt;</span>
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.assigndesktop+xml
+Date: Wed, 16 Feb 2011 17:31:43 GMT
+Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;assigndesktop</span> <span class="na">xmlns=</span><span class="s">http://citrix.com/delivery-services/1-0/assigndesktop</span> <span class="na">status=</span><span class="s">”success”</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;netbiosname&gt;</span>desktop1<span class="nt">&lt;/netbiosname&gt;</span>
+<span class="nt">&lt;/assigndesktop&gt;</span>
+</pre></div>
+
+
+<h3 id="example-assign-desktop-failure"><a class="toclink" href="#example-assign-desktop-failure">Example: Assign Desktop Failure</a></h3>
+<h4 id="request_2"><a class="toclink" href="#request_2">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/Q2l0cm...Q-/assigndesktop HTTP/1.1 Authorization: CitrixAuth H4sIA....
+Host: www.example.com
+Accepts: application/vnd.citrix.assigndesktop+xml,
+Content-Type: application/vnd.citrix.assigndesktopparams+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;assigndesktopparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/assigndesktopparams&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;clientAddress&gt;</span>10.70.0.123<span class="nt">&lt;/clientAddress&gt;</span> <span class="nt">&lt;/subscriptionUpdate&gt;</span>
+</pre></div>
+
+
+<h4 id="response_2"><a class="toclink" href="#response_2">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.assigndesktop+xml
+Date: Wed, 16 Feb 2011 17:31:43 GMT
+Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;assigndesktop</span> <span class="na">xmlns=</span><span class="s">http://citrix.com/delivery-services/1-0/assigndesktop</span> <span class="na">status=</span><span class="s">”failure”</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;errorid&gt;</span>no-available-workstation<span class="nt">&lt;/errorid&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../sessions-service/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../endpoints-service/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

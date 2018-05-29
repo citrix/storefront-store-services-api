@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Machine Power Off - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Machine Power Off";
+      var mkdocs_page_input_path = "machine-power-off.md";
+      var mkdocs_page_url = "/machine-power-off/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Machine Power Off</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#machine-power-off" style="padding:0px;position: relative;">&nbsp;Machine Power Off</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Machine Power Off</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="machine-power-off"><a class="toclink" href="#machine-power-off">Machine Power Off</a></h1>
+<p>This service triggers the physical machine for the specified resource to be powered down. Only specific resources support this action, and typically only for a limited set of users. Due to limitations on the XenDesktop server, this service may return with a timed-out error response, even if the power off is successful, if it does not happen within a required time-limit.</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only)</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/{id}/poweroff</td>
+<td>POST</td>
+<td>Returns the result of triggering a Power Off operation on the underlying machine. See below for details on the format of the response.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The URLs given above are for illustrative purposes only. The actual URL used in a request should be obtained from the server in the response to a resource enumeration request (e.g. /resources/v2/).</li>
+<li>The data POSTed is Xml described by the schema: /Schemas/ MachinePowerOffParams.xsd</li>
+<li>The request content-type must be: application/vnd.citrix.machinepoweroffparams+xml</li>
+</ul>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>PowerOff request sent to machine leading to success/failure of power off operation.</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Resource identified by {id} was not found or the power-off action did not exist or was not enabled for that resource for the current user.<br> The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response: <br><strong>ResourceNotFound</strong>: No resource was found for the requesting user for the specified id. <br> <strong>ResourceDisabled</strong>: The resource was found but was not enabled.<br> <strong>UnsupportedOperation</strong>: ICA launch was not supported for this resource.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.machinepoweroff+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The response returns data regarding the power off request indicating whether the power off operation succeeded. If unsuccessful, the error reason is indicated with an error id. The response is Xml, the schema for which can be found at: /Schemas/MachinePowerOff.xsd.</p>
+<table>
+<thead>
+<tr>
+<th>Error Id</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"in-maintenance-mode"</td>
+<td>The requested operation couldn't be performed because the machine is in maintenance mode.</td>
+<td></td>
+</tr>
+<tr>
+<td>"no-machine"</td>
+<td>No assigned machines were found for the user in the specified machine group.</td>
+<td></td>
+</tr>
+<tr>
+<td>"not-supported"</td>
+<td>The requested operation is not supported on the requested machine group type.</td>
+<td></td>
+</tr>
+<tr>
+<td>"operation-in-progress"</td>
+<td>The server is busy with a control operation on the specified machine and cannot handle another request at this time.</td>
+<td></td>
+</tr>
+<tr>
+<td>"timed-out"</td>
+<td>The server timed out waiting for the request to complete.<br> <strong>Note</strong>: The power off operation may have succeeded, but not within the timeout period defined on the XenDesktop server.</td>
+<td></td>
+</tr>
+<tr>
+<td>"not-trusted"</td>
+<td>The client is not trusted to perform the requested operation. This does not imply whether the credentials supplied are/are not valid.</td>
+<td></td>
+</tr>
+<tr>
+<td>"unspecified"</td>
+<td>Error condition not covered by the other values.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-successful-poweroff"><a class="toclink" href="#example-successful-poweroff">Example: Successful PowerOff</a></h3>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/resources/v2/1234...789/poweroff HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.machinepoweroff+xml
+Accept-Language: en-gb
+Content-Type: application/vnd.citrix.machinepoweroffparams+xml Content-Length: 0
+Authorization: CitrixAuth security-token
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;machinepoweroffparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/machinepoweroffparams&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;/machinepoweroffparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.machinepoweroff+xml Content-Length: xxx
+Content-Language: en-gb
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;machinepoweroff</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/machinepoweroff&quot;</span>
+        <span class="na">status=</span><span class="s">&quot;success&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/machinepoweroff&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../images-and-icons/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../rade-service/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

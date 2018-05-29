@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Subscriptions Service - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Subscriptions Service";
+      var mkdocs_page_input_path = "subscriptions-service.md";
+      var mkdocs_page_url = "/subscriptions-service/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Subscriptions Service</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#subscriptions-service" style="padding:0px;position: relative;">&nbsp;Subscriptions Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#request-data" style="padding:0px;position: relative;">Request data</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#success-response-content" style="padding:0px;position: relative;">Success Response Content</a></li>
+                
+                    <li><a class="toctree-l4" href="#subscription-status" style="padding:0px;position: relative;">Subscription Status</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Subscriptions Service</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="subscriptions-service"><a class="toclink" href="#subscriptions-service">Subscriptions Service</a></h1>
+<p>This service allows resources to be subscribed and unsubscribed, and to have data associated with each subscription.</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only) and Content-Type</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/subscriptions/{resourceId} application/vnd.citrix.subscriptionupdate+xml</td>
+<td>POST</td>
+<td>Action depends upon updateType attribute value:<br><strong>subscribe</strong>: Try to subscribe to the resource. This may create a new subscription (if one does not already exist) and by default will set the subscription to the subscribed state (although later extensions may complicate this behaviour).<br><strong>unsubscribe</strong> : Try to unsubscribe from the resource. This may delete the subscription and by default will set the subscription to the notSubscribed state (although later extensions may complicate this behaviour).<br><strong>update</strong>: Update the data associated with the subscription. This should succeed independent of future extensions, although will return 404 (Not Found) if no subscription exists.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{resourceId}</td>
+<td>The identifier of the associated resource. This is unique to the instance of the service.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: The URLs given above are for illustrative purposes only. The actual URL used in a request should be obtained from the results of an enumeration request (eg /resources/v2/ or /resources/v2/{id}).</p>
+<h2 id="request-data"><a class="toclink" href="#request-data">Request data</a></h2>
+<p>The POSTed requests are Xml, described by the schema: /Schemas/Subscriptions.xsd, with top level element subscriptionUpdate.</p>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code (and friendly name)</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 (OK)</td>
+<td>Subscription added/removed successfully or conflict occurred, the response content-type indicates which. See Success Response Content and Conflict Response Content sections below. <br>The conflict response is returned in any of the following cases:<ol><li> A request is made to subscribe to a resource in an incompatible state (e.g. subscribed).</li><li> A request is made to unsubscribe from a resource in an incompatible state (e.g. unsubscribed).</li> <li> A request is made to update data for a resource with no subscription record.</li> <li> An unspecified data conflict occurs due to clash with another simultaneous request.</li> <li> An extension (e.g. workflow integration) indicates a conflict in state (see relevant extension specification for details).</li></td>
+<td></td>
+</tr>
+<tr>
+<td>202 (Accepted)</td>
+<td>The request to subscribe/unsubscribe has been accepted, however there is workflow associated with the subscription/unsubscription which must be completed before the action will be complete.</td>
+<td></td>
+</tr>
+<tr>
+<td>400 (Bad Request)</td>
+<td>Missing {id} value or malformed data in the request body.</td>
+<td></td>
+</tr>
+<tr>
+<td>401 (Unauthorized)</td>
+<td>Bad/Missing security token <br> (see CitrixAuth Authentication Scheme document [3])</td>
+<td></td>
+</tr>
+<tr>
+<td>403 (Forbidden)</td>
+<td>The request token did not contain a user security identifier claim (this is required to give a unique identifier for the user for recording subscriptions)</td>
+<td></td>
+</tr>
+<tr>
+<td>404 (Not Found)</td>
+<td>Subscriptions are not enabled or the supplied resourceId does not refer to a resource visible to the requesting user.<br>The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response:<br><strong>ResourceNotFound</strong>: No resource was found for the requesting user for the specified id.<br><strong>SubscriptionsDisabled</strong>: Subscriptions are not enabled for the Store service. (Not expected unless advanced customization is performed on the server.)<br><strong>SubscriptionsReadOnly</strong>: Subscriptions are read only for the Store service</td>
+<td></td>
+</tr>
+<tr>
+<td>503 (Service Unavailable)</td>
+<td>An extension is temporarily unable to contact a service it requires to contact as part of the subscription process (see relevant extension specification for details)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="success-response-content"><a class="toclink" href="#success-response-content">Success Response Content</a></h2>
+<p>In the case that a successful response (HTTP status code 200 (OK)) is returned, the response body contains an Xml document, described by the schema: /Schemas/Subscriptions.xsd with root node subscriptionResult. The response contains the subscription and resource ids, current status of the subscription, and also properties that contain data relating to the subscription action (this data is empty except in the case of extensions):</p>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.subscriptionresult+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The data Xml element of the subscription result may contain properties that relate to the status change that has occurred as a result of the subscribe/unsubscribe action. This is intended as an extension mechanism.</li>
+<li>No account is made in the subscribe/unsubscribe actions what permissions, if any, the requesting user has on the resource identified by {resourceId}, other than that it is visible to that user.</li>
+</ul>
+<h2 id="subscription-status"><a class="toclink" href="#subscription-status">Subscription Status</a></h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>notSubscribed</td>
+<td>The resource is not subscribed.</td>
+<td></td>
+</tr>
+<tr>
+<td>subscribed</td>
+<td>The resource is subscribed.</td>
+<td></td>
+</tr>
+<tr>
+<td>approved</td>
+<td>Workflow has run and the user has been granted permission to use the resource. The subscription is awaiting user acknowledgement.</td>
+<td></td>
+</tr>
+<tr>
+<td>denied</td>
+<td>Workflow has run and the user has been denied permission to use the resource. The subscription is awaiting user acknowledgement.</td>
+<td></td>
+</tr>
+<tr>
+<td>All other values</td>
+<td>Workflow is running to determine whether the user may use the resource.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-successful-unsubscription"><a class="toclink" href="#example-successful-unsubscription">Example: Successful Unsubscription</a></h3>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/subscriptions/Q2l0cm...Q- HTTP/1.1 Authorization: CitrixAuth H4sIA....
+Host: www.example.com
+Accepts: application/vnd.citrix.subscriptionresult+xml,
+application/vnd.citrix.subscriptionconflict+xml Content-Type: application/vnd.citrix.subscriptionupdate+xml Content-Length: 269
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionUpdate</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span>
+       <span class="na">updateType=</span><span class="s">&quot;unsubscribe&quot;</span>
+       <span class="na">updateDataMode=</span><span class="s">&quot;merge&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;/subscriptionUpdate&gt;</span>
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.subscriptionresult+xml Date: Wed, 16 Feb 2011 17:31:43 GMT
+Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionResult</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;subscriptionId&gt;</span>4C34BB98E543F084BAA33696C5659F63<span class="nt">&lt;/subscriptionId&gt;</span> <span class="nt">&lt;resourceId&gt;</span>Citrix.MPS.App.Farm 1.Notepad<span class="nt">&lt;/resourceId&gt;</span> <span class="nt">&lt;status&gt;</span>notSubscribed<span class="nt">&lt;/status&gt;</span>
+<span class="nt">&lt;data</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/subscriptionResult&gt;</span>
+</pre></div>
+
+
+<h3 id="example-successful-update-of-subscription-data"><a class="toclink" href="#example-successful-update-of-subscription-data">Example: Successful Update of Subscription Data</a></h3>
+<p>This is an example of a successful update of the data associated with a subscription. The property ids and values are arbitrary from the perspective of the Resources service.</p>
+<h4 id="request_2"><a class="toclink" href="#request_2">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/subscriptions/Q2l0cm...Q- HTTP/1.1 Authorization: CitrixAuth H4sIA....
+Host: www.example.com
+Accepts: application/vnd.citrix.subscriptionresult+xml,
+application/vnd.citrix.subscriptionconflict+xml Content-Type: application/vnd.citrix.subscriptionupdate+xml Content-Length: xxxx
+Expect: 100-continue
+Connection: Keep-Alive
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionUpdate</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span>
+       <span class="na">updateType=</span><span class="s">&quot;update&quot;</span>
+       <span class="na">updateDataMode=</span><span class="s">&quot;merge&quot;</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;data&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">key=</span><span class="s">&quot;Data1Key&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;value&gt;</span>Data1 Value1<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;value&gt;</span>Data1 Value2<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;/data&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;/subscriptionUpdate&gt;</span>
+</pre></div>
+
+
+<h4 id="response_2"><a class="toclink" href="#response_2">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.subscriptionresult+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionResult</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;subscriptionId&gt;</span>4C34BB98E543F084BAA33696C5659F63<span class="nt">&lt;/subscriptionId&gt;</span> <span class="nt">&lt;resourceId&gt;</span>Citrix.MPS.App.Farm 1.Notepad<span class="nt">&lt;/resourceId&gt;</span> <span class="nt">&lt;status&gt;</span>subscribed<span class="nt">&lt;/status&gt;</span>
+<span class="nt">&lt;data</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/subscriptionResult&gt;</span>
+</pre></div>
+
+
+<h4 id="conflict-response-content"><a class="toclink" href="#conflict-response-content">Conflict Response Content</a></h4>
+<p>In the case that a conflict is returned (HTTP status code 200 (OK)), a response potentially containing data pertaining to the conflict is returned in the response body:
+Response Format|
+Request Accept /Response Content-Type Header|
+---|---|
+Xml|application/vnd.citrix.subscriptionconflict+xml|</p>
+<p>The subscription result content is Xml, described by the schema: /Schemas/Subscriptions.xsd with root node <strong>subscriptionConflict</strong>.</p>
+<p><strong>Note</strong>: The subscriptionconflict content type is intended to allow for extension, and will only contain properties in the case of extensions (e.g. workflow integration).</p>
+<h4 id="conflict-reason"><a class="toclink" href="#conflict-reason">Conflict Reason</a></h4>
+<p>The conflict response contains a reason attribute. The possible reason values are an open set allowing for workflow-integration- specific values in the future. The values defined in the base system are:</p>
+<table>
+<thead>
+<tr>
+<th>Reason value</th>
+<th>Meaning</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GeneralDataStoreConflict</td>
+<td>An undetermined conflict within the subscription data storage (typically due to transaction conflicts).</td>
+<td></td>
+</tr>
+<tr>
+<td>MissingSubscription</td>
+<td>A conflict due to a missing subscription.<br>(e.g. an attempt to unsubscribe or update a subscription to a resource that has never been subscribed.)</td>
+<td></td>
+</tr>
+<tr>
+<td>ConflictingSubscriptionState</td>
+<td>A conflict due to the state of an existing subscription.<br>(e.g. an attempt to subscribe to a resource with a subscription with status subscribed.)</td>
+<td></td>
+</tr>
+<tr>
+<td>GeneralWorkflowConflict</td>
+<td>A conflict caused by an undetermined conflict within the wokflow system.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-unsuccessful-subscription"><a class="toclink" href="#example-unsuccessful-subscription">Example: Unsuccessful Subscription</a></h3>
+<p>An example of an attempted subscription that is unsuccessful because the resource is already subscribed.</p>
+<p>The subscription, if successful, would have associated a client-specific property named “dazzle:path” with the subscription. The property id and value are arbitrary from the perspective of the Resources service.</p>
+<h4 id="request_3"><a class="toclink" href="#request_3">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/subscriptions/Q2l0cm...Q- HTTP/1.1 Authorization: CitrixAuth H4sIA....
+Host: www.example.com
+Accepts: application/vnd.citrix.subscriptionresult+xml,
+application/vnd.citrix.subscriptionconflict+xml Content-Type: application/vnd.citrix.subscriptionupdate+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionUpdate</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span>
+       <span class="na">updateType=</span><span class="s">&quot;subscribe&quot;</span>
+       <span class="na">updateDataMode=</span><span class="s">&quot;merge&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h4 id="response_3"><a class="toclink" href="#response_3">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.subscriptionconflict+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;subscriptionConflict</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span>
+       <span class="na">reason=</span><span class="s">&quot;ConflictingSubscriptionState&quot;</span> <span class="nt">&gt;</span>
+ <span class="nt">&lt;data</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/subscriptionConflict&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../rade-service/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../citrix-online-integration-feature/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

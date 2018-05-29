@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Endpoints Service - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Endpoints Service";
+      var mkdocs_page_input_path = "endpoints-service.md";
+      var mkdocs_page_url = "/endpoints-service/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Endpoints Service</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#endpoints-service" style="padding:0px;position: relative;">&nbsp;Endpoints Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#success-response-content" style="padding:0px;position: relative;">Success Response Content</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Endpoints Service</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="endpoints-service"><a class="toclink" href="#endpoints-service">Endpoints Service</a></h1>
+<p>This service returns a list of all the endpoints available with their associated metadata. An endpoint is essentially the URL of a service that the client can use to start a communication with the server. The endpoint service itself is considered an endpoint and it is included in the response.</p>
+<p><strong>Note</strong>: The endpoints service is not limited to the Store service (it is shared with, for example, the authentication service), but is defined here.</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/endpoints/v1/</td>
+<td>GET</td>
+<td>Returns the list of all the endpoints available.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The request does not require an Authorisation token.</li>
+</ul>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="success-response-content"><a class="toclink" href="#success-response-content">Success Response Content</a></h2>
+<p>In the case that a successful reponse is returned, the response body contains an Xml document giving the list of endpoints available. Each endpoint has the following data:</p>
+<ul>
+<li>id : Uniquely identifies the endpoint.</li>
+<li>url: The absolute URL of the endpoint.</li>
+<li>capabilities: A list of strings identifying the capabilities supported by the endpoint.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.endpoints+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The result content is Xml described by the schema: /Schemas/Endpoints.xsd.</p>
+<h3 id="example-successful-endpoints-enumeration"><a class="toclink" href="#example-successful-endpoints-enumeration">Example: Successful Endpoints Enumeration</a></h3>
+<h3 id="request_1"><a class="toclink" href="#request_1">Request</a></h3>
+<div class="codehilite"><pre><span></span>GET http://www.example.com/endpoints/v1/ HTTP/1.1
+Host: www.example.com
+Accept: application/vnd.citrix.endpoints+xml
+Authorization: CitrixAuth security-token
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.endpoints+xml
+Content-Length: xxx
+Cache-Control: xxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nt">&lt;endpoints</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/dazzleservices/2-0/endpoints&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;endpoint</span> <span class="na">id=</span><span class="s">&quot;Endpoints&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;url&gt;</span>http://www.example.com/Data/endpoints/v1<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;capabilities&gt;</span>
+      <span class="nt">&lt;capability&gt;</span>endpoints<span class="nt">&lt;/capability&gt;</span>
+    <span class="nt">&lt;/capabilities&gt;</span>
+  <span class="nt">&lt;/endpoint&gt;</span>
+  <span class="nt">&lt;endpoint</span> <span class="na">id=</span><span class="s">&quot;ListResourcesWithAutoProvision&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;url&gt;</span>http://www.example.com/Data/resources/v2<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;capabilities&gt;</span>
+<span class="nt">&lt;capability&gt;</span>ResourcesEnumerationV2<span class="nt">&lt;/capability&gt;</span> <span class="nt">&lt;capability&gt;</span>AutoProvision<span class="nt">&lt;/capability&gt;</span> <span class="nt">&lt;capability&gt;</span>group:core<span class="nt">&lt;/capability&gt;</span>
+  ...
+    <span class="nt">&lt;/capabilities&gt;</span>
+<span class="nt">&lt;/endpoint&gt;</span>
+  ...
+<span class="nt">&lt;/endpoints&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../assign-desktop-service/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../discovery-service/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

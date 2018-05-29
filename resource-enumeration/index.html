@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Resource Enumeration - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Resource Enumeration";
+      var mkdocs_page_input_path = "resource-enumeration.md";
+      var mkdocs_page_url = "/resource-enumeration/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Resource Enumeration</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#resource-enumeration" style="padding:0px;position: relative;">&nbsp;Resource Enumeration</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints" style="padding:0px;position: relative;">Endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#auto-provisioning" style="padding:0px;position: relative;">Auto Provisioning</a></li>
+                
+                    <li><a class="toctree-l4" href="#mandatory-apps" style="padding:0px;position: relative;">Mandatory Apps</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-request-all-resources" style="padding:0px;position: relative;">Example: Request all resources</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-request-a-specific-resource" style="padding:0px;position: relative;">Example: Request a specific resource</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Resource Enumeration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="resource-enumeration"><a class="toclink" href="#resource-enumeration">Resource Enumeration</a></h1>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL <span style="font-weight:normal">(indicative only)</span></th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/ /resources/v2/withoutautoprovision (see Endpoints section)</td>
+<td>GET</td>
+<td>Returns a list of all resources available for the user in resources Xml format, with or without auto-provision.</td>
+</tr>
+<tr>
+<td>/resources/v2/{id}</td>
+<td>GET</td>
+<td>Returns the details of specified resource in resource Xml format. This URL is given for illustrative purposes. The actual URL should be obtained from the enumeration result returned by the request to /resources/v2/.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>URL parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{id}</td>
+<td>The identifier of the resource. This is unique to the instance of the service.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Query string parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group</td>
+<td>Allows the requester to specify which resource elements should be returned by the enumeration. Rather than specify the elements individually, ‘groups’ are defined which give a group name associated with a collection of elements names (the mechanism by which groups are defined is not described here). <br> The default value (if no group is specified) is ‘<strong>all</strong>’. The ‘<strong>all</strong>’ group corresponds to requesting all available elements.  <br> Group names are matched regardless of case. Unrecognized group names are ignored. If multiple groups are specified then the union of the elements for each group is used. Multiple groups can be requested using multiple group parameters e.g. to request all elements in either the <strong>core</strong> or <strong>sub</strong> groups: .../resources/v2/?group=core&amp;group=sub. <br>  The id element is always returned. If one or more groups are specified, but none of the group names are recognized, then resources containing just the id element will be returned. <br> See below for the default groups defined. This set of groups may be increased by Citrix or 3rd- party extensions in the future (the mechanisms for this extension are not discussed here). Note, however, that groups extensions will not be allowed to change the elements associated with a group.</td>
+</tr>
+<tr>
+<td>subscriptionStatus</td>
+<td>Allows the requester to specify that only resources with a specified set of status values should be returned. Multiple status values can be requested using multiple subscriptionStatus parameters. If no subscriptionStatus is supplied, resources are returned regardless of subscription status. <br> The valid values are those defined in the subscription schema for the subscriptionStatus element (see /Schemas/Subscriptions.xsd).</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>Allows the scope to be specified (a concept in the Nfuse protocol). <br> Only a limited set of allowed values will be permitted. Other values will result in a HTTP 400 (Bad Request) response. The value check will be case-insensitive, although the value passed on to the underlying system will be of the defined case. <br> Allowed values: <pre>$PRELAUNCH$ </pre> and <pre> $ANONYMOUS_PRELAUNCH$ </pre> - As defined by the pre-launch optimizations for PNAgent. <br>The scope value will be passed in the Nfuse RequestAppData made to XenApp/XenDesktop.</td>
+</tr>
+<tr>
+<td>clientName, clientAddress</td>
+<td>See Client Name, Client Address and Device Id section above.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>These requests require an Authorisation token</li>
+<li>The URL for a request for a specific resource (i.e. /resources/v2/{id}) is obtained from the Response to resource enumeration (i.e. /resources/v2/).</li>
+<li>In all cases, for each request, the service will perform a fresh enumeration for the user and so will pick up any changes.</li>
+<li>Group and subscriptionStatus query string parameters can be applied in any combination (both, either, neither) and order.</li>
+</ul>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Bad/Missing security token (see CitrixAuth Authentication Scheme document [3] )</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>No resource available for the specified {id} parameter (the resource may not exist or access to it may not be authorized for the requesting user).</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resources Xml format</td>
+<td>application/vnd.citrix.resources+xml</td>
+<td></td>
+</tr>
+<tr>
+<td>Resource Xml format</td>
+<td>application/vnd.citrix.resource+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The resources Xml format allows for extensions. The default Store service with no 3rd-party extensions will have the following elements which shall exist in the [http://citrix.com/delivery-services/2-0/resources] (‘res:’) and [http://citrix.com/delivery-services/2-0/subscriptions] (‘sub:’) namespaces.</p>
+<table>
+<thead>
+<tr>
+<th>Extension element</th>
+<th>Group(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res:id</td>
+<td>n/a</td>
+<td>An identifier that is unique across this instance of the resources service. This value is always returned in resources regardless of specified groups.</td>
+</tr>
+<tr>
+<td>Res:title</td>
+<td>core</td>
+<td>The user friendly name of the resource.</td>
+</tr>
+<tr>
+<td>Res:link</td>
+<td>core, status</td>
+<td>The url to request the resource’s details.</td>
+</tr>
+<tr>
+<td>Res:summary</td>
+<td>core</td>
+<td>A longer text description of the resource.</td>
+</tr>
+<tr>
+<td>Res:path</td>
+<td>core</td>
+<td>The path defined in the XenApp/XenDesktop Farm for the resource</td>
+</tr>
+<tr>
+<td>res:resourcetype</td>
+<td>core</td>
+<td>A string identifying the type of the resource. If no extensions are installed, this will be one of the values <strong>‘Citrix.MPS.Application’</strong>, <strong>‘Citrix.MPS.Desktop’</strong> or <strong>‘Citrix.MPS.Document’</strong>.</td>
+</tr>
+<tr>
+<td></td>
+<td>res:playsfiletypes</td>
+<td>fta</td>
+</tr>
+<tr>
+<td>res:contentlocation</td>
+<td>launch</td>
+<td>The location (UNC or URL) of the content of a document resource. [Document only]</td>
+</tr>
+<tr>
+<td>res:clienttypes</td>
+<td>core</td>
+<td>A value identifying the clients supported for launches. Known values include:<br> <strong>‘ica30’</strong>, <strong>‘rade’</strong>, <strong>‘rdp’</strong> (XenApp/XenDesktop), <br><strong>‘application/ios’</strong>, <strong>‘application/android’</strong>(AppController), <strong>‘g2m’</strong>, <strong>‘g2t’</strong>, etc (Citrix Online Integration using Generic applications). <br><br>Future releases of the Store Service or using future versions of XenApp, XenDesktop or AppController may return additional values.</td>
+</tr>
+<tr>
+<td>Res:rade</td>
+<td>launch</td>
+<td>Holds details on the Rade license type and offline mode.</td>
+</tr>
+<tr>
+<td>Res:keywords</td>
+<td>keywords</td>
+<td>A list of keywords associated with the resource (see Appendix A: Keywords and Properties Parsing)</td>
+</tr>
+<tr>
+<td>res:properties</td>
+<td>keywords</td>
+<td>A list of name value pairs associated with the resource (see Appendix A: Keywords and Properties Parsing)</td>
+</tr>
+<tr>
+<td>res:images</td>
+<td>images</td>
+<td>A list of image sizes and color depths held by the StoreFront Services server (may be used to determine which image sizes are likely to give good results when requested by the client).</td>
+</tr>
+<tr>
+<td>Res:launchica</td>
+<td>launch</td>
+<td>The url to which to make an ICA launch request (see Launch).</td>
+</tr>
+<tr>
+<td>Res:launchrade</td>
+<td>launch</td>
+<td>The url to which to make a Rade (streaming) launch request (see Launch).</td>
+</tr>
+<tr>
+<td>Res:image</td>
+<td>core</td>
+<td>The url to which to make a request for the best image for the resource (see Images and Icons).</td>
+</tr>
+<tr>
+<td>Res:icon</td>
+<td>icon</td>
+<td>The url to which to request the ico file for the resource (see Images and Icons).</td>
+</tr>
+<tr>
+<td>Res:enabled</td>
+<td>core</td>
+<td><pre>true|false </pre>value indicating whether the resource is enabled.</td>
+</tr>
+<tr>
+<td>Res:machinepoweroff</td>
+<td>vm</td>
+<td>The url to which to send a request to trigger a shutdown of the physical/virtual machine supplying a desktop (see Machine Power Off). [XenDesktop desktops only]</td>
+</tr>
+<tr>
+<td>res:mandatory</td>
+<td>sub</td>
+<td><pre>true|false</pre> value indicating whether the resource is mandatory. <br>Resources marked as mandatory are always subscribed and cannot be un-subscribed by the clients. <br>Clients should treat the resource as non mandatory if this element is missing.</td>
+</tr>
+<tr>
+<td>res:showondesktop</td>
+<td>core</td>
+<td><pre>true|false</pre> value indicating whether the resource is should be shown as a desktop shortcut.<br>Clients should treat the resource as not to be shown on the desktop if this element is missing</td>
+</tr>
+<tr>
+<td>res:showonstartmenu</td>
+<td>core</td>
+<td><pre>true|false</pre> value indicating whether the resource is should be shown as an entry on the start menu.<br>Clients should treat the resource as not to be shown on the start menu if this element is missing</td>
+</tr>
+<tr>
+<td>res:startmenuroot</td>
+<td>core</td>
+<td>If the associated resource is to be shown on the start menu, this string value indicates the root location within the start menu structure.<br>Clients should treat the value as an empty string if this element is missing</td>
+</tr>
+<tr>
+<td>res:startmenupath</td>
+<td>core</td>
+<td>If the associated resource is to be shown on the start menu, this string value indicates the sub-location beneath any specified start menu root location within the menu structure.<br>Clients should treat the value as an empty string if this element is missing</td>
+</tr>
+<tr>
+<td>sub:subscriptionactions</td>
+<td>sub</td>
+<td>The url to which to send subscribe, unsubscribe or subscription- update requests for the current user and resource (see Subscriptions Service).<br>If this element is missing, clients are not able to change the resource subscription state, although the resource may still have subscriptionstatus and other subscription elements.</td>
+</tr>
+<tr>
+<td>sub:subscriptionstatus</td>
+<td>sub, status</td>
+<td>The subscription status.</td>
+</tr>
+<tr>
+<td>sub:subscriptionid</td>
+<td>sub</td>
+<td>The subscription id.</td>
+</tr>
+<tr>
+<td>sub:subscriptiondata</td>
+<td>keywords</td>
+<td>The subscription properties.</td>
+</tr>
+<tr>
+<td>res:featured</td>
+<td>core</td>
+<td><pre>true|false </pre> value. true if <strong>featured</strong> or <strong>recommended</strong> keywords are found (case-insensitive) otherwise false.</td>
+</tr>
+<tr>
+<td>res:workflowenabled</td>
+<td>core</td>
+<td><pre>true|false</pre> value. true if workflow is enabled for the resource.</td>
+</tr>
+<tr>
+<td>res:workflowwithoutclientinteraction</td>
+<td>core</td>
+<td><pre>true|false</pre> value. Set to true if workflow is enabled but does not require client interaction for the resource (typically due to the presence of the <strong>WFI</strong> keyword, but this may change in future). This value is only true if the server can determine with certainty that there will be no interaction. Due to the distributed nature of workflow integration, there may be situations where the server is unable to determine this value with certainty and so will return false.</td>
+</tr>
+<tr>
+<td>res:imagehash</td>
+<td>core</td>
+<td>A string giving a hash of the resources full image data. If two resources have the same image hash value, then (barring the insignificant chance of a hash collision) they have the same image data.<br><br>For most purposes clients can use the res:image URL value to determine whether resources share image data.</td>
+</tr>
+<tr>
+<td>sub:subscriptionquestionurl</td>
+<td>workflow</td>
+<td>The URL that the Receiver client should launch to allow the user to specify a reason for the subscription (the value of the SubscriptionQuestionURL subscription property).</td>
+</tr>
+<tr>
+<td>sub:subscriptionreasontext</td>
+<td>workflow</td>
+<td>The user's provided reason for subscribing (the value of the SubscriptionReasonText subscription property).</td>
+</tr>
+<tr>
+<td>sub:subscriptionresponsereason</td>
+<td>workflow, status</td>
+<td>The reason supplied by the approval system for allowing or rejecting a subscription, typically a value entered by a manager (the value of the SubscriptionResponseReason subscription property).</td>
+</tr>
+<tr>
+<td>res:accessonetimeticket</td>
+<td>launch</td>
+<td>The URL to which a client can make a one-time request for a URL that can be used for a browser launch (also known as ‘pre-launch’ or ‘sso’ service).<br>The details of the access one-time service found at this URL are outside the scope of this document.</td>
+</tr>
+<tr>
+<td>res:followmedataaccess</td>
+<td>fmd</td>
+<td>The URL to hold the location of the follow-me data (FMD) service for a resource.<br>The details of the service found at this URL are outside the scope of this document.</td>
+</tr>
+<tr>
+<td>res:aggregatedresource</td>
+<td>core</td>
+<td><pre>true|false</br> value. true if the resource is aggregated.</td>
+</tr>
+<tr>
+<td>res:publisherresourceid</td>
+<td>core</td>
+<td>The publisher resource id. This id allows the publisher to uniquely identity a resource.</td>
+</tr>
+<tr>
+<td>res:publishername</td>
+<td>core</td>
+<td>The name of the publisher (the farm name for XA).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: The image and icon urls represent the image data at the point that the enumeration was performed. If, subsequently, the image data changes for the resource, these urls will not point to the updated images. On the other hand the urls are persistent in the sense that they will always point to the same image (or icon file), although they may return 404 after the image data has been updated on the XenApp/XenDesktop server.</p>
+<p>The root <pre>resources </pre> element shall also have the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute (namespace)</th>
+<th>Value</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enumeration (http://citrix.com/delivery- services/2-0 resources)</td>
+<td>full</td>
+<td>All the aggregated Xml Services responded</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>partial</td>
+<td>Some of the aggregated Xml Services responded</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>failed</td>
+<td>None of the aggregated Xml Services responded</td>
+<td></td>
+</tr>
+<tr>
+<td>subscriptionsstatus (http://citrix.com/delivery- services/2-0/subscriptions)</td>
+<td>enabled</td>
+<td>Subscriptions enabled</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>disabled</td>
+<td>Subscriptions disabled</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>unavailable</td>
+<td>Subscriptions enabled, but database currently unavailable.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="endpoints"><a class="toclink" href="#endpoints">Endpoints</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only)</th>
+<th>Id</th>
+<th>Capabilities</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/withoutautoprovision</td>
+<td>ListResources</td>
+<td>ResourcesEnumerationV2 + 'group:<groupname>' for each supported group name.</td>
+<td></td>
+</tr>
+<tr>
+<td>/resources/v2</td>
+<td>ListResourcesWithAutoProvision</td>
+<td>ResourcesEnumerationV2 AutoProvision + 'group:<groupname>' for each supported group name.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-provisioning"><a class="toclink" href="#auto-provisioning">Auto Provisioning</a></h2>
+<p>This service offers optional auto-provisioning behaviour. With auto-provisioning, the enumeration service automatically subscribes an application if all of the following conditions are true:</p>
+<ul>
+<li>The application is an Auto-provisioned application.</li>
+<li>The application has never been subscribed.</li>
+<li>The application has no associated workflow for subscription.</li>
+</ul>
+<h2 id="mandatory-apps"><a class="toclink" href="#mandatory-apps">Mandatory Apps</a></h2>
+<p>All the apps which are marked as mandatory have the following subscriptions behaviour.</p>
+<ul>
+<li>They are always subscribed for all users.</li>
+<li>They cannot be unsubscribed by the Clients. </li>
+</ul>
+<h2 id="example-request-all-resources"><a class="toclink" href="#example-request-all-resources">Example: Request all resources</a></h2>
+<h3 id="request_1"><a class="toclink" href="#request_1">Request</a></h3>
+<div class="codehilite"><pre><span></span>GET http://www.example.com/Citrix/Store/resources/v2?group=core&amp;group=sub HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.resources+xml
+Accept-Encoding: gzip, deflate,gzip, deflate
+Authorization: CitrixAuth H4sIAA........
+Host: www.example.com
+</pre></div>
+
+
+<h3 id="response_1"><a class="toclink" href="#response_1">Response</a></h3>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.resources+xml
+Content-Length: xxxxxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;resources</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/resources&quot;</span>
+<span class="na">xmlns:a=</span><span class="s">&quot;http://citrix.com/delivery-services/2-0/subscriptions&quot;</span>
+           <span class="na">enumeration=</span><span class="s">&quot;full&quot;</span> <span class="na">a:subscriptionsstatus=</span><span class="s">&quot;enabled&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;resource&gt;</span>
+    <span class="nt">&lt;id&gt;</span>Controller.Notepad<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;link&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/link&gt;</span>
+<span class="nt">&lt;title&gt;</span>Notepad<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;summary&gt;</span>Notepad<span class="nt">&lt;/summary&gt;</span>
+<span class="nt">&lt;path&gt;</span>\<span class="nt">&lt;/path&gt;</span> <span class="nt">&lt;resourcetype&gt;</span>Citrix.MPS.Application<span class="nt">&lt;/resourcetype&gt;</span> <span class="nt">&lt;clienttypes&gt;</span>
+      <span class="nt">&lt;clienttype&gt;</span>ica30<span class="nt">&lt;/clienttype&gt;</span>
+      <span class="nt">&lt;clienttype&gt;</span>rdp<span class="nt">&lt;/clienttype&gt;</span>
+    <span class="nt">&lt;/clienttypes&gt;</span>
+    <span class="nt">&lt;rade&gt;</span>
+      <span class="nt">&lt;licenseType&gt;</span>online<span class="nt">&lt;/licenseType&gt;</span>
+      <span class="nt">&lt;offlineMode&gt;</span>none<span class="nt">&lt;/offlineMode&gt;</span>
+    <span class="nt">&lt;/rade&gt;</span>
+    <span class="nt">&lt;images&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;48&quot;</span> <span class="na">depth=</span><span class="s">&quot;4&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;32&quot;</span> <span class="na">depth=</span><span class="s">&quot;4&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;24&quot;</span> <span class="na">depth=</span><span class="s">&quot;4&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;16&quot;</span> <span class="na">depth=</span><span class="s">&quot;4&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;48&quot;</span> <span class="na">depth=</span><span class="s">&quot;8&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;32&quot;</span> <span class="na">depth=</span><span class="s">&quot;8&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;24&quot;</span> <span class="na">depth=</span><span class="s">&quot;8&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;16&quot;</span> <span class="na">depth=</span><span class="s">&quot;8&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;256&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;48&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;32&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;24&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+      <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;16&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/images&gt;</span>
+    <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+    <span class="nt">&lt;launchica&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu/launch/ica<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/launchica&gt;</span>
+<span class="nt">&lt;image&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/E4wNXorb0I5OHEvZlhsOWFZPQ--/image<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/image&gt;</span>
+<span class="nt">&lt;icon&gt;</span> <span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/E4wNXorb0I5OHEvZlhsOWFZPQ--/icon<span class="nt">&lt;/url&gt;</span>
+<span class="nt">&lt;/icon&gt;</span> <span class="nt">&lt;imagehash&gt;</span>E4wNXorb0I5OHEvZlhsOWFZPQ--<span class="nt">&lt;/imagehash&gt;</span> <span class="nt">&lt;aggregatedresource&gt;</span>false<span class="nt">&lt;/aggregatedresource&gt;</span> <span class="nt">&lt;publisherresourceid&gt;</span>Notepad<span class="nt">&lt;publisherresourceid&gt;</span> <span class="nt">&lt;publishername&gt;</span>Farm1<span class="nt">&lt;/publishername&gt;</span> <span class="nt">&lt;mandatory&gt;</span>true<span class="nt">&lt;/mandatory&gt;</span> <span class="nt">&lt;a:subscriptionactions&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/subscriptions/Q2l0cml4Lk1QUy5BcHAu<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/a:subscriptionactions&gt;</span>
+<span class="nt">&lt;/resource&gt;</span>
+  ...
+<span class="nt">&lt;/resources&gt;</span>
+</pre></div>
+
+
+<h2 id="example-request-a-specific-resource"><a class="toclink" href="#example-request-a-specific-resource">Example: Request a specific resource</a></h2>
+<p><strong>Notes</strong>: When a request is made for a specific resource, then the same Xml is returned as for the corresponding resource element in the resources enumeration using the same schema, as illustrated by the following example:</p>
+<h3 id="request_2"><a class="toclink" href="#request_2">Request</a></h3>
+<div class="codehilite"><pre><span></span>GET https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu HTTP/1.1 Accept: application/vnd.citrix.resource+xml
+Authorization: CitrixAuth H4sIAA........
+Host: www.example.com
+Connection: Keep-Alive
+</pre></div>
+
+
+<h3 id="response_2"><a class="toclink" href="#response_2">Response</a></h3>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.resource+xml
+Content-Length: xxxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;resource&gt;</span>
+  <span class="nt">&lt;id&gt;</span>Controller.Notepad<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;link&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/link&gt;</span>
+<span class="nt">&lt;title&gt;</span>Notepad<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;summary&gt;</span>Notepad<span class="nt">&lt;/summary&gt;</span>
+<span class="nt">&lt;path&gt;</span>\<span class="nt">&lt;/path&gt;</span> <span class="nt">&lt;resourcetype&gt;</span>Citrix.MPS.Application<span class="nt">&lt;/resourcetype&gt;</span> <span class="nt">&lt;clienttypes&gt;</span>
+    <span class="nt">&lt;clienttype&gt;</span>ica30<span class="nt">&lt;/clienttype&gt;</span>
+    <span class="nt">&lt;clienttype&gt;</span>rdp<span class="nt">&lt;/clienttype&gt;</span>
+  <span class="nt">&lt;/clienttypes&gt;</span>
+  <span class="nt">&lt;rade&gt;</span>
+    <span class="nt">&lt;licenseType&gt;</span>online<span class="nt">&lt;/licenseType&gt;</span>
+    <span class="nt">&lt;offlineMode&gt;</span>none<span class="nt">&lt;/offlineMode&gt;</span>
+  <span class="nt">&lt;/rade&gt;</span>
+  <span class="nt">&lt;images&gt;</span>
+    <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;48&quot;</span> <span class="na">depth=</span><span class="s">&quot;4&quot;</span>  <span class="nt">/&gt;</span>
+     ...
+    <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;16&quot;</span> <span class="na">depth=</span><span class="s">&quot;32&quot;</span>  <span class="nt">/&gt;</span>
+<span class="nt">&lt;/images&gt;</span>
+  <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+  <span class="nt">&lt;launchica&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu/launch/ica<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/launchica&gt;</span>
+<span class="nt">&lt;image&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/E4wNXorb0I5OHEvZlhsOWFZPQ--/image<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/image&gt;</span>
+<span class="nt">&lt;icon&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/E4wNXorb0I5OHEvZlhsOWFZPQ--/icon<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/icon&gt;</span>
+<span class="nt">&lt;imagehash&gt;</span>E4wNXorb0I5OHEvZlhsOWFZPQ--<span class="nt">&lt;/imagehash&gt;</span> <span class="nt">&lt;mandatory&gt;</span>true<span class="nt">&lt;/mandatory&gt;</span> <span class="nt">&lt;a:subscriptionactions&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://www.example.com/Citrix/Store/resources/v2/subscriptions/Q2l0cml4Lk1QUy5BcHAu<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/a:subscriptionactions&gt;</span>
+<span class="nt">&lt;/resource&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../general-behavior/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../launch/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

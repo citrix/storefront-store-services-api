@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Launch - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Launch";
+      var mkdocs_page_input_path = "launch.md";
+      var mkdocs_page_url = "/launch/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Launch</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#launch" style="padding:0px;position: relative;">&nbsp;Launch</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#launch-parameters" style="padding:0px;position: relative;">Launch Parameters</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#ica-launch-result" style="padding:0px;position: relative;">ICA Launch Result</a></li>
+                
+                    <li><a class="toctree-l4" href="#failed-launch-error-codes" style="padding:0px;position: relative;">Failed Launch Error Codes</a></li>
+                
+                    <li><a class="toctree-l4" href="#retry-reason-codes" style="padding:0px;position: relative;">Retry Reason Codes</a></li>
+                
+                    <li><a class="toctree-l4" href="#launch-examples" style="padding:0px;position: relative;">Launch Examples</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Launch</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="launch"><a class="toclink" href="#launch">Launch</a></h1>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only)</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/resources/v2/{id}/launch/ica</td>
+<td>POST</td>
+<td>Attempt to launch the specified resource using the ICA protocol</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/resources/v2/{id}/launch/rade</td>
+<td>POST</td>
+<td>Attempt to launch the specified resource using the Rade protocol</td>
+</tr>
+<tr>
+<td>/resources/v2/{id}/launch/{protocol}/{retrykey}</td>
+<td>POST</td>
+<td>Retry the attempt to launch the specified resource using the specified protocol</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{id}</td>
+<td>The identifier of the associated resource. This is unique to the instance of the service.</td>
+<td></td>
+</tr>
+<tr>
+<td>{protocol}</td>
+<td>The protocol to be used to launch the resource ('ica' or 'rade')</td>
+<td></td>
+</tr>
+<tr>
+<td>{retrykey}</td>
+<td>The retry key used to identify a launch request that is not ready (see below)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>These requests require an Authorisation token.</li>
+<li>The URLs given above are for illustrative purposes, the actual URLs used by a client should be taken from the result of a previous request (e.g. /resources/v2/ or /resources/v2/{id} for all launch urls apart from the retry url which should be returned in a launch retry response).</li>
+<li>The launch requests require the specification of launch parameters, included as Xml in the POST body, described below.</li>
+<li>If subscriptions are enabled, then unsubscribed resources are prevented from launching.</li>
+</ul>
+<h2 id="launch-parameters"><a class="toclink" href="#launch-parameters">Launch Parameters</a></h2>
+<p>The following information is required by the launch process, which is sent as POSTed Xml, described by the schema: /Schemas/LaunchParams.xsd</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Launch Type</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientName</td>
+<td>Optional</td>
+<td>All protocols</td>
+<td>A string identifying the client (any characters except null (0) or newline characters. It is the client's responsibility to use a value that will behave appropriately (see notes below)</td>
+<td></td>
+</tr>
+<tr>
+<td>clientAddress</td>
+<td>Optional</td>
+<td>All protocols</td>
+<td>The IPv4 or IPv6 address of the client, as claimed by the client</td>
+<td></td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>Optional</td>
+<td>All protocols</td>
+<td>A string identifying the client device</td>
+<td></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>The audio settings for the session, one of the following:<br><pre>[high|medium|low|off]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>colourDepth</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>The colour depth for the session, one of the following: <pre>[16 | 256 | high | truecolor ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>display</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>The display type for the session, one of the following: <pre>[seamless | percent | absolute | fullscreen]</pre></td>
+<td>displayPercent</td>
+</tr>
+<tr>
+<td>displayAbsolute</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>Only if display=absolute<br>The x and y extents of the window to be used for the session<br><pre>[ 0 &lt; x,y]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>transparentKeyPassthrough</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>Set the behavior of the windows keys etc., one of the following: <pre>[local | remote | fullscreenonly ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>specialFolderRedirection</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>Are the special folders directed, one of the following: <pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>clearTypeRemoting</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>Are ClearType fonts remoted, one of the following: <pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>showDesktopViewer</td>
+<td>Optional</td>
+<td>ica</td>
+<td>Should the desktop viewer be used as the ICA client. <pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>launcher</td>
+<td>Optional</td>
+<td>ica</td>
+<td>Identifier for the launcher program.<br>Any string is allowed, not including null (0) or newline characters.</td>
+<td></td>
+</tr>
+<tr>
+<td>virtualComPort</td>
+<td>Optional</td>
+<td>ica</td>
+<td>If specified, determines the value of the VirtualCOMPortEmulation setting in the WFClient section.<pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>comPortMapping</td>
+<td>Optional</td>
+<td>ica</td>
+<td>If specified, determines the value of the COMAllowed setting in the WFClient section.<pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+<tr>
+<td>clientPrinter</td>
+<td>Optional</td>
+<td>ica</td>
+<td>If specified, determines the values of the CPMAllowed and VSLAllowed settings in the WFClient section.<pre>[true | false ]</pre></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The presence of the launch parameters shall be signaled by setting the Content-Type of the POST to be: application/vnd.citrix.launchparams+xml</li>
+<li>The use of clientAddress is required to take advantage of the Zone Preference feature of XenApp.</li>
+<li>For the Workspace control feature, either clientName or deviceId is required.</li>
+<li>The clientName either identifies the client machine or the end-user, depending on the semantics required by the client and is usually one of the following:<ul>
+<li>The client hostname</li>
+<li>A random string</li>
+<li>A digest of username+domain (assumed by older versions of the XenApp Xml Service and XenApp for Unix versions)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note</strong>: If the resources are being accessed through Access Gateway, then the clientName is specified by the gateway.</p>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success/Retry required/failure</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Resource identified by {id} was not available for launch. The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response: <br>ResourceNotFound: No resource was found for the requesting user for the specified id.<br><strong>ResourceDisabled</strong>: The resource was found but was not enabled.<br><strong>UnsupportedOperation</strong>: ICA launch was not supported for this resource.<br><strong>SubscriptionStatusInvalid</strong>: Workflow was enabled for the resource but was not in the subscribed state.<br><strong>SubscriptionStatusUnknown</strong>: Workflow was enabled for the resource, but the system was unable to determine the subscription state.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.launchdata+xml</td>
+</tr>
+</tbody>
+</table>
+<p>The response returns data regarding the launch request that can be categorised as: Success, Retry required, or Failure. A retry is required, for example, when a desktop has to be started before a connection can be made to it. The data returned in the response is Xml described by the schema: /Schemas/LaunchData.xsd.</p>
+<h2 id="ica-launch-result"><a class="toclink" href="#ica-launch-result">ICA Launch Result</a></h2>
+<p>Successful ICA launch results contain the following data: </p>
+<p>ica : The ICA file content.</p>
+<p>logonTicket : Specifies any logon ticket that might have been generated for the current launch. This value could be parsed from the ICA file content, but is supplied as a convenience for clients. Clients are expected to use this as a security measure to allow any outstanding logon tckets to be cleaned up if the client is closed while launches are outstanding with logon tickets that might not have been redeemed.</p>
+<h2 id="failed-launch-error-codes"><a class="toclink" href="#failed-launch-error-codes">Failed Launch Error Codes</a></h2>
+<p>If the response represents a failed launch (launch type ‘error’), then the contained error id will be one of the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Launch error Id</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AppRemoved</td>
+<td>The resource to launch no longer exists, is no longer enabled or is no longer visible to the current user.</td>
+<td></td>
+</tr>
+<tr>
+<td>NoMoreActiveSessions</td>
+<td>The user is not allowed any more active sessions. Currently applies to XenDesktop only.</td>
+<td></td>
+</tr>
+<tr>
+<td>NotLicensed</td>
+<td>The server does not have the required license to perform the requested activity.</td>
+<td></td>
+</tr>
+<tr>
+<td>UnavailableDesktop</td>
+<td>No workstations are available to service this request. Currently applies to XenDesktop only.</td>
+<td></td>
+</tr>
+<tr>
+<td>CouldNotConnectToWorkstation</td>
+<td>The server refused a connection. Currently applies to XenDesktop only.</td>
+<td></td>
+</tr>
+<tr>
+<td>WorkstationInMaintenance</td>
+<td>The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only.</td>
+<td></td>
+</tr>
+<tr>
+<td>ResourceError <br> GeneralAppLaunchError</td>
+<td>General error that cannot be further specified.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="retry-reason-codes"><a class="toclink" href="#retry-reason-codes">Retry Reason Codes</a></h2>
+<p>If the response represents a delayed launch (launch type ‘’retry”), then the contained retryReason will be one of the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Launch retry reason</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rebooting</td>
+<td>The requested workstation is rebooting.</td>
+<td></td>
+</tr>
+<tr>
+<td>resuming</td>
+<td>The requested workstation is resuming.</td>
+<td></td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>Retry reason not covered by the other values.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="remedy-hint-codes"><a class="toclink" href="#remedy-hint-codes">Remedy Hint Codes</a></h3>
+<p>If the response represents a delayed or failed launch, then the response may contain a remedyHint value with one of the following values:</p>
+<table>
+<thead>
+<tr>
+<th>remdyHint values</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>restart-desktop</td>
+<td>The problem may be resolved by restarting the desktop.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="launch-examples"><a class="toclink" href="#launch-examples">Launch Examples</a></h2>
+<h3 id="example-successful-ica-launch"><a class="toclink" href="#example-successful-ica-launch">Example: Successful Ica launch</a></h3>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu/launch/ica HTTP/1.1 Accept: application/vnd.citrix.launchdata+xml
+Authorization: CitrixAuth H4sIAAAAAAAEAO29B2AcS/T+x8z9Ajw4AAA==
+Content-Type: application/vnd.citrix.launchparams+xml
+Content-Length: xxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;</span>
+<span class="nt">&lt;launchparams</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+              <span class="na">xmlns:xsd=</span><span class="s">http://www.w3.org/2001/XMLSchema</span>
+<span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launchparams&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;deviceId&gt;</span>clientname<span class="nt">&lt;/deviceId&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span>
+<span class="nt">&lt;/launchparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0 Content-Type: application/vnd.citrix.launchdata+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;launch</span> <span class="na">status=</span><span class="s">&quot;success&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launch&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;result</span> <span class="na">type=</span><span class="s">&quot;ica&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ica&gt;</span>...[ICA File Content]...<span class="nt">&lt;/ica&gt;</span>
+<span class="nt">&lt;logonTicket&gt;</span>+dPeXidrRyAgdyqJzX...<span class="nt">&lt;/logonTicket&gt;</span> <span class="nt">&lt;/result&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+
+
+<h3 id="example-failed-rade-launch"><a class="toclink" href="#example-failed-rade-launch">Example: Failed Rade launch</a></h3>
+<h4 id="request_2"><a class="toclink" href="#request_2">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST https://www.example.com/Citrix/Store/resources/v2/Q2l0cml4Lk1QUy5BcHAu/launch/rade HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.launchdata+xml
+Accept-Language: en-gb
+Content-Type: application/vnd.citrix.launchparams+xml Content-Length: xxx
+Authorization: CitrixAuth H4sIA....
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;launchparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launchparams&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;deviceId&gt;</span>clientname<span class="nt">&lt;/deviceId&gt;</span> <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span> <span class="nt">&lt;clientAddress&gt;</span>127.0.0.1<span class="nt">&lt;/clientAddress&gt;</span>
+<span class="nt">&lt;/launchparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_2"><a class="toclink" href="#response_2">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.launchdata+xml Content-Length: xxx
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;launch</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launch&quot;</span>
+        <span class="na">status=</span><span class="s">&quot;failure&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;result</span> <span class="na">type=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;error&gt;</span>
+<span class="nt">&lt;id&gt;</span>ResourceUnavailable<span class="nt">&lt;/id&gt;</span>
+<span class="nt">&lt;text&gt;</span>The resource is unavailable<span class="nt">&lt;/text&gt;</span>
+    <span class="nt">&lt;/error&gt;</span>
+  <span class="nt">&lt;/result&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+
+
+<h3 id="example-ica-launch-with-retry"><a class="toclink" href="#example-ica-launch-with-retry">Example: ICA launch with retry</a></h3>
+<h4 id="request_3"><a class="toclink" href="#request_3">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/Q2l0cm...Q-/launch/ica HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.launchdata+xml
+Accept-Language: en-gb
+Content-Type: application/vnd.citrix.launchparams+xml
+Content-Length: xxx
+Authorization: CitrixAuth H4sIA....
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;launchparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launchparams&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;deviceId&gt;</span>clientname<span class="nt">&lt;/deviceId&gt;</span> <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span> <span class="nt">&lt;clientAddress&gt;</span>127.0.0.1<span class="nt">&lt;/clientAddress&gt;</span>
+<span class="nt">&lt;/launchparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_3"><a class="toclink" href="#response_3">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.launchdata+xml Content-Length: xxx
+Content-Language: en-gb
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;launch</span> <span class="na">status=</span><span class="s">&quot;retry&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launch&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;result</span> <span class="na">type=</span><span class="s">&quot;retry&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;retry&gt;</span>
+<span class="nt">&lt;url&gt;</span>http://www.example.com/Citrix/Store/resources/v2/Q2l0cm...Q-/launch/ica/bbb56<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;after&gt;</span>30<span class="nt">&lt;/after&gt;</span>
+<span class="nt">&lt;reason&gt;</span>unknown<span class="nt">&lt;/reason&gt;</span>
+    <span class="nt">&lt;/retry&gt;</span>
+  <span class="nt">&lt;/result&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+
+
+<p><strong>Note</strong>: The URL used in this next request is the one returned in the previous response, which includes the retry key: ‘bbb567’:</p>
+<h4 id="request_4"><a class="toclink" href="#request_4">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Citrix/Store/resources/v2/Q2l0cm...Q-/launch/ica/bbb567 HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.launchdata+xml
+Accept-Language: en-gb
+Content-Type: application/vnd.citrix.launchparams+xml Content-Length: xxx
+Authorization: CitrixAuth H4sIA....
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;launchparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launchparams&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;deviceId&gt;</span>clientname<span class="nt">&lt;/deviceId&gt;</span> <span class="nt">&lt;clientName&gt;</span>clientname<span class="nt">&lt;/clientName&gt;</span> <span class="nt">&lt;clientAddress&gt;</span>127.0.0.1<span class="nt">&lt;/clientAddress&gt;</span>
+<span class="nt">&lt;/launchparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_4"><a class="toclink" href="#response_4">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0 Content-Type: application/vnd.citrix.launchdata+xml Content-Length: xxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;launch</span> <span class="na">status=</span><span class="s">&quot;success&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/launch&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;result</span> <span class="na">type=</span><span class="s">&quot;ica&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ica&gt;</span>...[ICA File Content]...<span class="nt">&lt;/ica&gt;</span> <span class="nt">&lt;logonTicket&gt;</span>85EB92973D2C3804F93A99AAEC232D<span class="nt">&lt;/logonTicket&gt;</span>
+ <span class="nt">&lt;/result&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../resource-enumeration/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../images-and-icons/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

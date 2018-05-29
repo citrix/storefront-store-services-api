@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Sessions Service - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Sessions Service";
+      var mkdocs_page_input_path = "sessions-service.md";
+      var mkdocs_page_url = "/sessions-service/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Sessions Service</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#sessions-service" style="padding:0px;position: relative;">&nbsp;Sessions Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#request-parameters" style="padding:0px;position: relative;">Request Parameters</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#endpoints" style="padding:0px;position: relative;">Endpoints</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Sessions Service</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="sessions-service"><a class="toclink" href="#sessions-service">Sessions Service</a></h1>
+<p>There are methods available through the NFuse protocol for tracking ICA sessions not connected to by the current client. These may be disconnected or connected to by other clients. Methods are provided to allow the client to:</p>
+<ul>
+<li>Disconnect the currently connected session(s) with support for logon tickets.</li>
+<li>LogOff the currently connected session(s) with support for logon tickets.</li>
+<li>List any disconnected sessions.</li>
+<li>List any sessions connected to other clients (although this disconnects those sessions as an unavoidable side-effect!).</li>
+<li>Connect to a disconnected session.</li>
+</ul>
+<p>As the current behaviour is neither safe nor idempotent, all requests require the use of the POST verb.</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only)</th>
+<th>Method</th>
+<th>Request Content-Type</th>
+<th>Response Content-Type</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/sessions/v1/available</td>
+<td>POST</td>
+<td>Session Parameters</td>
+<td>Session State</td>
+<td>Returns data on sessions which are available for connection from the client.<br><strong>Note that with the exception of XenDesktop 7 (and later) that this has side-effect of disconnecting sessions if 'active' sessions are queried.</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>/sessions/v1/disconnect/</td>
+<td>POST</td>
+<td>Session Parameters</td>
+<td>Session Result</td>
+<td>Disconnect the requested sessions</td>
+<td></td>
+</tr>
+<tr>
+<td>/sessions/v1/logoff/</td>
+<td>POST</td>
+<td>Session Parameters</td>
+<td>Session Result</td>
+<td>Logoff the requested sessions</td>
+<td></td>
+</tr>
+<tr>
+<td>/sessions/v1/{session-id}/launch/ica</td>
+<td>POST</td>
+<td>Launch Parameters</td>
+<td>Launch Data</td>
+<td>Attempt to launch the specified session using the ica protocol.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{session-id}</td>
+<td>The identifier of the session.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>These requests require an Authorisation token</li>
+<li>Requesting ‘active’ session types will actively disconnect those sessions from other clients as a side-effect while returning the session details. This is a limitation of the underlying XenApp API.</li>
+<li>The Launch Parameters are described by the schema: /Schemas/LaunchParams.xsd and the response Launch Data is described by the schema: /Schemas/LaunchData.xsd</li>
+<li>The launch URL value is obtained by the client from the results of the available session requests.</li>
+<li>The other URLs are obtained via the endpoints service (see Endpoints section below).</li>
+</ul>
+<h2 id="request-parameters"><a class="toclink" href="#request-parameters">Request Parameters</a></h2>
+<p>The following information is required by the requests to the session service. The data is sent as Xml in the body of the POST described by the schema: /Schemas/SessionParameters.xsd</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientName</td>
+<td>Yes</td>
+<td>A string identifying the client. It is the client's responsibility to use a value that will behave appropriately (see notes in Launch section)</td>
+<td></td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>No</td>
+<td>Identifies the device, if specified, it overrides the clientName in identifying the end-point.</td>
+<td></td>
+</tr>
+<tr>
+<td>includeActiveSessions</td>
+<td>No</td>
+<td>A boolean specifying whether to include active sessions. <pre>[true|false]</td>
+<td></td>
+</tr>
+<tr>
+<td>appSessionsOnly</td>
+<td>No</td>
+<td>A Boolean specifying whether to only return only application sessions.<br>A value of true will list app sessions from any XD7 farm and pre- XD7 XenApp app hosting farm. Pre XD7 XenDesktop hosting farms will not be queried so as not to disconnect active desktops (a side effect of querying sessions).<br>Where a XenApp hosts both apps and desktops the session queries will continue to disconnect a users active desktop.<br>Farm exclusion based on version can be overridden to list all farm application sessions by setting the LegacyWorkspaceControl value to on (off is the default) in the Store <farm/> element.<br> <pre>[ true | false ] </pre> with the default being false.</td>
+<td></td>
+</tr>
+<tr>
+<td>tickets</td>
+<td>No</td>
+<td>This parameter is <strong>only used in LogOff and Disconnect session services</strong> and represents a list of tickets that will be invalidated by the server.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: The presence of the session parameters shall be signaled by setting the Content-Type of the POST to be: 
+<pre>application/vnd.citrix.sessionparams+xml</pre></p>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success/Failure</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Session identified by {session-id} was not found</td>
+<td></td>
+</tr>
+<tr>
+<td>400</td>
+<td>POSTed data missing or invalid</td>
+<td></td>
+</tr>
+<tr>
+<td>406</td>
+<td>Unrecognised Accepts Header</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session State</td>
+<td>application/vnd.citrix.sessionstate+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The Response to the Request for session information returns Session Data, the schema for which can be found at: /Schemas/SessionState.xsd.</li>
+<li>The Response to the Request to disconnect or logoff returns Session Result Data, that describes the success or failure of the entire operation. This data is Xml, described by the schema: /Schemas/SessionResult.xsd.</li>
+</ul>
+<h2 id="endpoints"><a class="toclink" href="#endpoints">Endpoints</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL (indicative only)</th>
+<th>Id</th>
+<th>Capabilities</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/sessions/v1/available</td>
+<td>ListSessions</td>
+<td>listSessions</td>
+<td></td>
+</tr>
+<tr>
+<td>/sessions/v1/disconnect</td>
+<td>DisconnectSessions</td>
+<td>disconnectSessions</td>
+<td></td>
+</tr>
+<tr>
+<td>/sessions/v1/logoff</td>
+<td>LogOffSessions</td>
+<td>logOffSessions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-request-session-information"><a class="toclink" href="#example-request-session-information">Example: Request Session Information</a></h3>
+<p>In this example all sessions are requested by not qualifying the server and client types.</p>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Store/sessions/v1/available HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.sessionstate+xml
+Content-Type: application/vnd.citrix.sessionparams+xml Content-Length: xxx
+Authorization: CitrixAuth ...
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionparams&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;clientName&gt;</span>xxxxxxxxx<span class="nt">&lt;/clientName&gt;</span> <span class="nt">&lt;deviceId&gt;</span>xxxxxxxxx<span class="nt">&lt;/deviceId&gt;</span> <span class="nt">&lt;includeActiveSessions&gt;</span>true<span class="nt">&lt;/includeActiveSessions&gt;</span>
+<span class="nt">&lt;/sessionparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_1"><a class="toclink" href="#response_1">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.sessionstate+xml Content-Length: xxx
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionState</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionstate&quot;</span>
+             <span class="na">enumeration=</span><span class="s">&quot;full&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;sessions&gt;</span>
+    <span class="nt">&lt;session</span> <span class="na">id=</span><span class="s">&quot;zyxw9876&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;serverType&gt;</span>win32<span class="nt">&lt;/serverType&gt;</span>
+      <span class="nt">&lt;launchIca&gt;</span>
+<span class="nt">&lt;url&gt;</span>http://www.example.com/Store/session/v1/zyxw9876/launch/ica<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/launchIca&gt;</span>
+<span class="nt">&lt;initialapp&gt;</span>MSPaint<span class="nt">&lt;/initialapp&gt;</span> <span class="nt">&lt;initialappresourceaggregated&gt;</span>false<span class="nt">&lt;/initialappresourceaggregated&gt;</span> <span class="nt">&lt;initialappresourceid&gt;</span>XA1.MSPaint<span class="nt">&lt;/initialappresourceid&gt;</span> <span class="nt">&lt;publishername&gt;</span>Farm1<span class="nt">&lt;/publishername&gt;</span>
+    <span class="nt">&lt;/session&gt;</span>
+    <span class="nt">&lt;session</span> <span class="na">id=</span><span class="s">&quot;3e4d5f6g&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;serverType&gt;</span>win32<span class="nt">&lt;/serverType&gt;</span>
+      <span class="nt">&lt;launchIca&gt;</span>
+<span class="nt">&lt;url&gt;</span>http://www.example.com/Store/session/v1/3e4d5f6g/launch/ica<span class="nt">&lt;/url&gt;</span> <span class="nt">&lt;/launchIca&gt;</span>
+<span class="nt">&lt;initialapp&gt;</span>Notepad<span class="nt">&lt;/initialapp&gt;</span> <span class="nt">&lt;initialappresourceaggregated&gt;</span>false<span class="nt">&lt;/initialappresourceaggregated&gt;</span> <span class="nt">&lt;initialappresourceid&gt;</span>XA1.Notepad<span class="nt">&lt;/initialappresourceid&gt;</span> <span class="nt">&lt;publishername&gt;</span>Farm1<span class="nt">&lt;/publishername&gt;</span>
+    <span class="nt">&lt;/session&gt;</span>
+  <span class="nt">&lt;/sessions&gt;</span>
+<span class="nt">&lt;/sessiondata&gt;</span>
+</pre></div>
+
+
+<h3 id="example-disconnect"><a class="toclink" href="#example-disconnect">Example: Disconnect</a></h3>
+<h4 id="request_2"><a class="toclink" href="#request_2">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Store/sessions/v1/disconnect HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.sessionresults+xml
+Content-Type: application/vnd.citrix.sessionparams+xml Content-Length: xxx
+Authorization: CitrixAuth ...
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionparams&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>xxxxxxxxx<span class="nt">&lt;/clientName&gt;</span>
+  <span class="nt">&lt;deviceId&gt;</span>xxxxxxxxx<span class="nt">&lt;/deviceId&gt;</span>
+  <span class="nt">&lt;tickets&gt;</span>
+<span class="nt">&lt;ticket&gt;</span>85EB92973D2C3804F93A99AAEC232D<span class="nt">&lt;/ticket&gt;</span> <span class="nt">&lt;/tickets&gt;</span>
+<span class="nt">&lt;/sessionparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_2"><a class="toclink" href="#response_2">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.sessionresults+xml Content-Length: xxx
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionResults</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionresult&quot;</span> <span class="na">status=</span><span class="s">&quot;success&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3 id="example-logoff"><a class="toclink" href="#example-logoff">Example: LogOff</a></h3>
+<h4 id="request_3"><a class="toclink" href="#request_3">Request</a></h4>
+<div class="codehilite"><pre><span></span>POST http://www.example.com/Store/sessions/v1/logoff HTTP/1.1 Host: www.example.com
+Accept: application/vnd.citrix.sessionresults+xml Content-Type: application/vnd.citrix.sessionparams+xml Content-Length: xxx
+Authorization: CitrixAuth ...
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionparams</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionparams&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;clientName&gt;</span>xxxxxxxxx<span class="nt">&lt;/clientName&gt;</span>
+  <span class="nt">&lt;deviceId&gt;</span>xxxxxxxxx<span class="nt">&lt;/deviceId&gt;</span>
+  <span class="nt">&lt;tickets&gt;</span>
+    <span class="nt">&lt;ticket&gt;</span>85EB92973D2C3804F93A99AAEC232D<span class="nt">&lt;/ticket&gt;</span>
+    <span class="nt">&lt;ticket&gt;</span>85EB92973D2C3804F93A99AAEC232A<span class="nt">&lt;/ticket&gt;</span>
+  <span class="nt">&lt;/tickets&gt;</span>
+<span class="nt">&lt;/sessionparams&gt;</span>
+</pre></div>
+
+
+<h4 id="response_3"><a class="toclink" href="#response_3">Response</a></h4>
+<div class="codehilite"><pre><span></span>HTTP/1.1 200 OK
+Content-Type: application/vnd.citrix.sessionresults+xml Content-Length: xxx
+Cache-Control: no-cache
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;sessionResults</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/1-0/sessionresult&quot;</span> <span class="na">status=</span><span class="s">&quot;success&quot;</span> <span class="nt">/&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../citrix-online-integration-feature/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../assign-desktop-service/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

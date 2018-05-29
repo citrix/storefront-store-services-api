@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Accounts Service - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Accounts Service";
+      var mkdocs_page_input_path = "accounts-service.md";
+      var mkdocs_page_url = "/accounts-service/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../citrix-online-integration-feature/">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Accounts Service</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#accounts-service" style="padding:0px;position: relative;">&nbsp;Accounts Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#request" style="padding:0px;position: relative;">Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
+                
+                    <li><a class="toctree-l4" href="#account-service-example" style="padding:0px;position: relative;">Account Service Example</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Accounts Service</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="accounts-service"><a class="toclink" href="#accounts-service">Accounts Service</a></h1>
+<p>This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://<host>/Citrix/<StoreName>/ (where <host> is the single server or cluster hostname for the installation, and <StoreName> the name of the store), the accounts service has the base url http(s)://<host>/Citrix/Roaming/</p>
+<h2 id="request"><a class="toclink" href="#request">Request</a></h2>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Method</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/Citrix/Roaming/accounts</td>
+<td>GET/POST</td>
+<td>Returns the list of available accounts with full details.</td>
+<td></td>
+</tr>
+<tr>
+<td>/Citrix/Roaming/accounts?summary</td>
+<td>GET/POST</td>
+<td>Returns the list of available accounts, as summaries, i.e. no details.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: These requests may require an Authorisation token depending on the Stores configuration. Authorisation is only required if all Stores require authentication and share the same authentication service and authentication protocols. Future releases may remove authentication entirely from this service.</p>
+<h2 id="response"><a class="toclink" href="#response">Response</a></h2>
+<table>
+<thead>
+<tr>
+<th>Response Code</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td></td>
+</tr>
+<tr>
+<td>##Success Response Content</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>In the case that a successful reponse is returned, the response body contains an Xml document giving the list of accounts available, described by the schema: /Schemas/Accounts.xsd</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>For the StoreFront Services 1.2 release, a few simplifications apply:<ul>
+<li>No trust settings or properties are defined.</li>
+<li>Plug-ins are only defined at the account level.</li>
+</ul>
+</li>
+</ul>
+<h3 id="content-hash"><a class="toclink" href="#content-hash">Content Hash</a></h3>
+<p>The <contentHash> element contains a hash of the account content that can be used by the client to determine whether the content has changed. This can be used in conjunction with the summary parameter to optimize network bandwidth usage. The algorithm used to generate the hash may be changed in later revisions, so the client should not treat the contentHash as anything other than an opaque string or make assumptions about the length or format.</p>
+<h3 id="published"><a class="toclink" href="#published">Published</a></h3>
+<p>Indicates whether the account is published. Published accounts are presented to the user by preference over unpublished accounts.</p>
+<p><strong>Note</strong>: The xs:boolean type allows ‘true’/’false’ or, equivalently, ‘1’/’0’ values to be used so clients should parse both correctly.</p>
+<h3 id="metadata"><a class="toclink" href="#metadata">MetaData</a></h3>
+<p>From the Accounts Xml format, metadata (plug-ins, trust settings and properties) can be specified at the account or individual service level. Metadata specified at the account level should be assumed to apply to all services in the account, individual services may choose to add extra metadata or override the account-level values.</p>
+<h3 id="plug-ins"><a class="toclink" href="#plug-ins">Plug-ins</a></h3>
+<p>The plug-in values which may be returned by the account service are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Plug-in value</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A9852000-047D-11DD-95FF-0800200C9A66</td>
+<td>Receiver (Online)</td>
+<td></td>
+</tr>
+<tr>
+<td>2C882560-4469-4E65-9EBE-4A842840F273</td>
+<td>Offline Plug-in</td>
+<td></td>
+</tr>
+<tr>
+<td>b9852000-041d-11ff-25ff-0800400c9a66</td>
+<td>VPN</td>
+<td></td>
+</tr>
+<tr>
+<td>73cf72ab-2528-4836-8b69-062a92da02bb</td>
+<td>ShareFile Outlook Plug-in</td>
+<td></td>
+</tr>
+<tr>
+<td>18952f2a-6e32-4606-9cc2-48dab425ba36</td>
+<td>ShareFile Desktop Widget</td>
+<td></td>
+</tr>
+<tr>
+<td>DF0F00A4-BB7E-4af5-915F-F0A674B2264A</td>
+<td>HDX RealTime Media Engine (aka ‘Lync Accelerator’) from Acosta.</td>
+<td></td>
+</tr>
+<tr>
+<td>4122F203-D87B-4e9c-BE7A-222E4E8A9C6F</td>
+<td>Acceleration Plug-in (not returned by StoreFront Services 1.2)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: These are equivalent values to those used by Merchandising Server</p>
+<h3 id="trust-settings"><a class="toclink" href="#trust-settings">Trust Settings</a></h3>
+<p>These specify the trust settings for various aspects of the client. Values can be Yes, No or Ask, indicating whether settings should be enabled, disabled or whether the user should be prompted to choose.</p>
+<h3 id="properties"><a class="toclink" href="#properties">Properties</a></h3>
+<p>These allow arbitrary data to be associated with a service and are intended as an extension mechanism.</p>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.roamingaccounts+xml</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="account-service-example"><a class="toclink" href="#account-service-example">Account Service Example</a></h2>
+<p>This is an example of a client discovering the latest account information for a user. It assumes that the client has already authenticated and has a suitable authorization token, so the authentication exchange is not shown. This example illustrates the use of contentHash and the summary request. This does not imply that using the summary request is necessarily the best way to query account information as the cost of two network round-trips may outweigh the saved bandwidth for occasions where the second request is saved because the account data has not changed.</p>
+<h3 id="example-request-summary-account-data"><a class="toclink" href="#example-request-summary-account-data">Example: Request Summary Account Data</a></h3>
+<p>In this example, the client requests summary account data to find out if any of the accounts have changed, been added or removed since the client last retrieved account data, which it has cached, including the contentHash values:</p>
+<h4 id="request_1"><a class="toclink" href="#request_1">Request</a></h4>
+<div class="codehilite"><pre><span></span>GET https://storefront01/Citrix/Roaming/accounts/?summary HTTP/1.1 Accept: application/vnd.citrix.roamingaccounts+xml
+Authorization: CitrixAuth H4sIAA........
+Host: storefront01
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Response
+HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.roamingaccounts+xml Content-Length: xxxxx
+<span class="err">&lt;</span>?xml version=”1.0” encoding=”utf-8”&gt;
+<span class="nt">&lt;accounts</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-1/accounts&quot;</span>
+<span class="na">xmlns:sr=</span><span class="s">&quot;http://www.citrix.com/ServiceRecord&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;account&gt;</span>
+<span class="nt">&lt;id&gt;</span> 775552B2-3E81-4FDA-93D1-CE0374E902AD<span class="nt">&lt;/id&gt;</span> <span class="nt">&lt;name&gt;</span>Store<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;description&gt;&lt;/description&gt;</span> <span class="nt">&lt;published&gt;</span>true<span class="nt">&lt;/published&gt;</span> <span class="nt">&lt;contentHash&gt;</span>AAA34596786767...345DEF<span class="nt">&lt;/contentHash&gt;</span>
+  <span class="nt">&lt;/account&gt;</span>
+  <span class="nt">&lt;account&gt;</span>
+<span class="nt">&lt;id&gt;</span>1234DEF-1111-4FDA-5555-1234567890<span class="nt">&lt;/id&gt;</span> <span class="nt">&lt;name&gt;</span>Store2<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;description&gt;&lt;/description&gt;</span> <span class="nt">&lt;published&gt;</span>false<span class="nt">&lt;/published&gt;</span> <span class="nt">&lt;contentHash&gt;</span>BBB3373737377...123CCC<span class="nt">&lt;/contentHash&gt;</span>
+<span class="nt">&lt;/account&gt;</span>
+<span class="nt">&lt;/accounts&gt;</span>
+</pre></div>
+
+
+<p>The data has changed so the client requests the full data:</p>
+<h4 id="request_2"><a class="toclink" href="#request_2">Request</a></h4>
+<div class="codehilite"><pre><span></span>GET https://storefront01/Citrix/Roaming/accounts/ HTTP/1.1
+Accept: */*
+Authorization: CitrixAuth H4sIAA........
+Host: storefront01
+Response
+HTTP/1.1 200 OK
+Cache-Control: public, no-store, max-age=0
+Content-Type: application/vnd.citrix.roamingaccounts+xml Content-Length: xxxxx
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err">&lt;</span>?xml version=”1.0” encoding=”utf-8”&gt;
+<span class="nt">&lt;accounts</span> <span class="na">xmlns=</span><span class="s">&quot;http://citrix.com/delivery-services/2-1/accounts&quot;</span>
+<span class="na">xmlns:sr=</span><span class="s">&quot;http://www.citrix.com/ServiceRecord&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;account&gt;</span>
+<span class="nt">&lt;id&gt;</span> 775552B2-3E81-4FDA-93D1-CE0374E902AD<span class="nt">&lt;/id&gt;</span> <span class="nt">&lt;name&gt;</span>Store<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;description&gt;&lt;/description&gt;</span> <span class="nt">&lt;published&gt;</span>true<span class="nt">&lt;/published&gt;</span> <span class="nt">&lt;contentHash&gt;</span>AAA34596786767...345DEF<span class="nt">&lt;/contentHash&gt;</span> <span class="nt">&lt;details&gt;</span>
+      <span class="nt">&lt;updaterType&gt;</span>citrix<span class="nt">&lt;/updaterType&gt;</span>
+      <span class="nt">&lt;annotatedServices&gt;</span>
+       <span class="c">&lt;!-- Store service --&gt;</span>
+       <span class="nt">&lt;annotatedService&gt;</span>
+         <span class="nt">&lt;sr:Service</span> <span class="na">type=</span><span class="s">”Store”</span><span class="nt">&gt;</span>
+<span class="nt">&lt;sr:SRID&gt;</span>1231231232312312<span class="nt">&lt;/sr:SRID&gt;</span>
+<span class="nt">&lt;sr:Name&gt;</span>Store<span class="nt">&lt;/sr:Name&gt;</span> <span class="nt">&lt;sr:Address&gt;</span>https://storefront01/Citrix/Store/discovery<span class="nt">&lt;/sr:Address&gt;</span> <span class="nt">&lt;sr:Gateways&gt;</span>
+             <span class="nt">&lt;sr:Gateway</span> <span class="err">...</span><span class="nt">&gt;</span>...<span class="nt">&lt;/sr:Gateway&gt;</span>
+           <span class="nt">&lt;/sr:Gateways&gt;</span>
+           <span class="nt">&lt;sr:Beacons&gt;</span>
+<span class="nt">&lt;sr:Internal&gt;</span> <span class="nt">&lt;sr:Beacon&gt;</span>https://storefront01/Citrix/Store/discovery<span class="nt">&lt;/sr:Beacon&gt;</span>
+             <span class="nt">&lt;/sr:Internal&gt;</span>
+             <span class="nt">&lt;sr:External&gt;</span>
+<span class="nt">&lt;sr:Beacon&gt;</span>http://www.example.com<span class="nt">&lt;/sr:Beacon&gt;</span>
+<span class="nt">&lt;sr:Beacon&gt;</span>http://www.microsoft.com<span class="nt">&lt;/sr:Beacon&gt;</span> <span class="nt">&lt;/sr:External&gt;</span>
+           <span class="nt">&lt;/sr:Beacons&gt;</span>
+         <span class="nt">&lt;/sr:Service&gt;</span>
+         <span class="nt">&lt;metadata&gt;</span>
+           <span class="nt">&lt;plugins/&gt;</span>
+           <span class="nt">&lt;trustSettings/&gt;</span>
+           <span class="nt">&lt;properties/&gt;</span>
+         <span class="nt">&lt;/metadata&gt;</span>
+       <span class="nt">&lt;/annotatedService&gt;</span>
+       <span class="c">&lt;!-- VPN service has gateways but no beacons or address --&gt;</span>
+       <span class="nt">&lt;annotatedService&gt;</span>
+<span class="nt">&lt;sr:Service</span> <span class="na">type=</span><span class="s">”VPN”</span><span class="nt">&gt;</span> <span class="nt">&lt;sr:SRID&gt;</span>454545454545454545454<span class="nt">&lt;/sr:SRID&gt;</span> <span class="nt">&lt;sr:Name&gt;</span>VPN<span class="nt">&lt;/sr:Name&gt;</span> <span class="nt">&lt;sr:Address&gt;&lt;/sr:Address&gt;</span>
+           <span class="nt">&lt;sr:Gateways&gt;</span>
+             <span class="nt">&lt;sr:Gateway</span> <span class="err">...</span><span class="nt">&gt;</span>...<span class="nt">&lt;/sr:Gateway&gt;</span>
+           <span class="nt">&lt;/sr:Gateways&gt;</span>
+           <span class="nt">&lt;sr:Beacons/&gt;</span>
+         <span class="nt">&lt;/sr:Service&gt;</span>
+         <span class="nt">&lt;metadata&gt;</span>
+           <span class="nt">&lt;plugins/&gt;</span>
+           <span class="nt">&lt;trustSettings/&gt;</span>
+           <span class="nt">&lt;properties/&gt;</span>
+         <span class="nt">&lt;/metadata&gt;</span>
+       <span class="nt">&lt;/annotatedService&gt;</span>
+      <span class="nt">&lt;/annotatedServices&gt;</span>
+      <span class="nt">&lt;metadata&gt;</span>
+<span class="nt">&lt;plugins&gt;</span>
+          <span class="c">&lt;!-- offline &amp; vpn plugins --&gt;</span>
+          <span class="nt">&lt;plugin&gt;</span>A9852000-047D-11DD-95FF-0800200C9A66<span class="nt">&lt;/plugin&gt;</span>
+<span class="nt">&lt;plugin&gt;</span>b9852000-041d-11ff-25ff-0800400c9a66<span class="nt">&lt;/plugin&gt;</span> <span class="nt">&lt;/plugins&gt;</span>
+<span class="nt">&lt;trustSettings/&gt;</span>
+<span class="nt">&lt;properties/&gt;</span>
+      <span class="nt">&lt;/metadata&gt;</span>
+    <span class="nt">&lt;/details&gt;</span>
+  <span class="nt">&lt;/account&gt;</span>
+  <span class="nt">&lt;account&gt;</span>
+<span class="nt">&lt;id&gt;</span>1234DEF-1111-4FDA-5555-1234567890<span class="nt">&lt;/id&gt;</span> <span class="nt">&lt;name&gt;</span>Store2<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;description&gt;&lt;/description&gt;</span> <span class="nt">&lt;published&gt;</span>false<span class="nt">&lt;/published&gt;</span> <span class="nt">&lt;contentHash&gt;</span>BBB3373737377...123CCC<span class="nt">&lt;/contentHash&gt;</span> <span class="nt">&lt;details&gt;</span>
+       ...
+    <span class="nt">&lt;/details&gt;</span>
+  <span class="nt">&lt;/account&gt;</span>
+<span class="nt">&lt;/accounts&gt;</span>
+</pre></div> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../discovery-service/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../appendix/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

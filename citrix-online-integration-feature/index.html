@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Citrix-Online Integration Feature (Generic Applications) - Citrix StoreFront Store Services API</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Citrix-Online Integration Feature (Generic Applications)";
+      var mkdocs_page_input_path = "citrix-online-integration-feature.md";
+      var mkdocs_page_url = "/citrix-online-integration-feature/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Scope</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../general-behavior/">General Behavior</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../resource-enumeration/">Resource Enumeration</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../launch/">Launch</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../images-and-icons/">Images and Icons</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../machine-power-off/">Machine Power Off</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../rade-service/">Rade Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../subscriptions-service/">Subscriptions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Citrix-Online Integration Feature (Generic Applications)</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#citrix-online-integration-feature-generic-applications" style="padding:0px;position: relative;">&nbsp;Citrix-Online Integration Feature (Generic Applications)</a></li>
+                
+                    <li><a class="toctree-l4" href="#source" style="padding:0px;position: relative;">Source</a></li>
+                
+                    <li><a class="toctree-l4" href="#transform" style="padding:0px;position: relative;">Transform</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../sessions-service/">Sessions Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../assign-desktop-service/">Assign Desktop Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../endpoints-service/">Endpoints Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../discovery-service/">Discovery Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../accounts-service/">Accounts Service</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../appendix/">Appendix</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Citrix-Online Integration Feature (Generic Applications)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="citrix-online-integration-feature-generic-applications"><a class="toclink" href="#citrix-online-integration-feature-generic-applications">Citrix-Online Integration Feature (Generic Applications)</a></h1>
+<p>The optional Citrix-Online Integration feature, if added to an installation, will add support for 'Generic Applications'. These are resources additonal to, or modified versions of, the resources returned by XenApp, XenDesktop or VDI-in-a-Box. The Generic Applications functionality is driven from configuration.</p>
+<p>The Generic Applications configuration appears in the citrix.deliveryservices/genericApplications section of the web.config configuration file in the Store web application. It has the form:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;genericApplications&gt;</span>
+<span class="nt">&lt;application</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">clientType=</span><span class="s">&quot;clientType&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;source</span> <span class="na">enabled=</span><span class="s">&quot;true|false&quot;</span> <span class="na">resourceId=</span><span class="s">&quot;resourceId&quot;</span> <span class="na">title=</span><span class="s">&quot;title&quot;</span> <span class="na">summary=</span><span class="s">&quot;summary&quot;</span> <span class="na">imageLocation=</span><span class="s">&quot;imagePath&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;keywords&gt;&lt;/keywords&gt;</span>
+<span class="nt">&lt;properties&gt;&lt;/properties&gt;</span>
+<span class="nt">&lt;/source&gt;</span>
+<span class="nt">&lt;transform</span> <span class="na">enabled=</span><span class="s">&quot;true|false&quot;</span> <span class="na">markerKeyword=</span><span class="s">&quot;keyword&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/application&gt;</span>
+<span class="nt">&lt;/genericApplications&gt;</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>application/@name</td>
+<td>A name to identify the generic application. Must be unique. Must contain path- friendly characters (e.g. abc_123) as it is used to identify the generic application details using the PowerShell configuration provider.</td>
+<td></td>
+</tr>
+<tr>
+<td>application/@clientType</td>
+<td>The client type to be returned for resources of this type.</td>
+<td></td>
+</tr>
+<tr>
+<td>application/source/@enabled</td>
+<td>Indicates whether a resource for this generic application should be generated for all users.</td>
+<td></td>
+</tr>
+<tr>
+<td>application/source/@resourceId</td>
+<td>Indicates the id to be used for the resource for this generic application (if enabled is true).</td>
+<td></td>
+</tr>
+<tr>
+<td>application/source/@title</td>
+<td>Indicates the title to be used for the resource for this generic application (if enabled is true).</td>
+<td></td>
+</tr>
+<tr>
+<td>application/source/@summary</td>
+<td>Indicates the summary to be used for the resource for this generic application (if enabled is true).</td>
+<td></td>
+</tr>
+<tr>
+<td>application/source/@imageLocation</td>
+<td>Indicates the icon to be used for the resource for this generic application (if enabled is true).</td>
+<td>The location can be an absolute path or relative to the web application's folder (e.g. App_Data/resources/g2m.ico)</td>
+</tr>
+<tr>
+<td>application/transform/@enabled</td>
+<td>Indicates whether a resource for this generic application should be generated by transforming a specific resource returned by XenApp or XenDesktop.</td>
+<td></td>
+</tr>
+<tr>
+<td>application/transform/@markerKeyword</td>
+<td>Indicates the keyword that marks a resource as being suitable for transformation. Any resource that contains this keyword (case-sensitive) will be transformed (if enabled is true).</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="source"><a class="toclink" href="#source">Source</a></h2>
+<p>If the source enabled attribute is set to true, then for all users, resource enumeration will contain an extra resource of type 'Citrix.MPS.Application' with the specified id, title, summary, client-types, keywords, properties and icon.</p>
+<h2 id="transform"><a class="toclink" href="#transform">Transform</a></h2>
+<p>If the transform enabled attribute is set to true then, any resource that has the specified marker-keyword, will be replaced with a resource with exactly the same id, type and other data, but with the client-types changed to contain the single, specified client- type.</p>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>It is not recommended to specify enabled="true" for both source and tranform elements for a single application entry, since that can lead to some users having two copies of the same generic application.</li>
+<li>If more than one resource contains the specified marker keyword, then it is possible that some users will have more than one copy of the same generic application.</li>
+</ul> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../subscriptions-service/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../sessions-service/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>
