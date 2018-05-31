@@ -240,7 +240,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only)</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -248,7 +247,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/{id}/poweroff</td>
 <td>POST</td>
 <td>Returns the result of triggering a Power Off operation on the underlying machine. See below for details on the format of the response.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -264,24 +262,20 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200</td>
 <td>PowerOff request sent to machine leading to success/failure of power off operation.</td>
-<td></td>
 </tr>
 <tr>
 <td>401</td>
 <td>Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])</td>
-<td></td>
 </tr>
 <tr>
 <td>404</td>
 <td>Resource identified by {id} was not found or the power-off action did not exist or was not enabled for that resource for the current user.<br> The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response: <br><strong>ResourceNotFound</strong>: No resource was found for the requesting user for the specified id. <br> <strong>ResourceDisabled</strong>: The resource was found but was not enabled.<br> <strong>UnsupportedOperation</strong>: ICA launch was not supported for this resource.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -290,14 +284,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Format</th>
 <th>Request Accept /Response Content-Type Header</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Xml</td>
 <td>application/vnd.citrix.machinepoweroff+xml</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -307,44 +299,36 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Error Id</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>"in-maintenance-mode"</td>
 <td>The requested operation couldn't be performed because the machine is in maintenance mode.</td>
-<td></td>
 </tr>
 <tr>
 <td>"no-machine"</td>
 <td>No assigned machines were found for the user in the specified machine group.</td>
-<td></td>
 </tr>
 <tr>
 <td>"not-supported"</td>
 <td>The requested operation is not supported on the requested machine group type.</td>
-<td></td>
 </tr>
 <tr>
 <td>"operation-in-progress"</td>
 <td>The server is busy with a control operation on the specified machine and cannot handle another request at this time.</td>
-<td></td>
 </tr>
 <tr>
 <td>"timed-out"</td>
 <td>The server timed out waiting for the request to complete.<br> <strong>Note</strong>: The power off operation may have succeeded, but not within the timeout period defined on the XenDesktop server.</td>
-<td></td>
 </tr>
 <tr>
 <td>"not-trusted"</td>
 <td>The client is not trusted to perform the requested operation. This does not imply whether the credentials supplied are/are not valid.</td>
-<td></td>
 </tr>
 <tr>
 <td>"unspecified"</td>
 <td>Error condition not covered by the other values.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

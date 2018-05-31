@@ -180,6 +180,8 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
                 
                     <li><a class="toctree-l4" href="#response" style="padding:0px;position: relative;">Response</a></li>
                 
+                    <li><a class="toctree-l4" href="#success-response-content" style="padding:0px;position: relative;">Success Response Content</a></li>
+                
                     <li><a class="toctree-l4" href="#account-service-example" style="padding:0px;position: relative;">Account Service Example</a></li>
                 
             
@@ -242,7 +244,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -250,13 +251,11 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/Citrix/Roaming/accounts</td>
 <td>GET/POST</td>
 <td>Returns the list of available accounts with full details.</td>
-<td></td>
 </tr>
 <tr>
 <td>/Citrix/Roaming/accounts?summary</td>
 <td>GET/POST</td>
 <td>Returns the list of available accounts, as summaries, i.e. no details.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -267,27 +266,17 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200</td>
 <td>Success</td>
-<td></td>
-</tr>
-<tr>
-<td>##Success Response Content</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>In the case that a successful reponse is returned, the response body contains an Xml document giving the list of accounts available, described by the schema: /Schemas/Accounts.xsd</td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<h2 id="success-response-content"><a class="toclink" href="#success-response-content">Success Response Content</a></h2>
+<p>In the case that a successful reponse is returned, the response body contains an Xml document giving the list of accounts available, described by the schema: /Schemas/Accounts.xsd</p>
 <p><strong>Notes</strong>:</p>
 <ul>
 <li>For the StoreFront Services 1.2 release, a few simplifications apply:<ul>
@@ -310,44 +299,36 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Plug-in value</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A9852000-047D-11DD-95FF-0800200C9A66</td>
 <td>Receiver (Online)</td>
-<td></td>
 </tr>
 <tr>
 <td>2C882560-4469-4E65-9EBE-4A842840F273</td>
 <td>Offline Plug-in</td>
-<td></td>
 </tr>
 <tr>
 <td>b9852000-041d-11ff-25ff-0800400c9a66</td>
 <td>VPN</td>
-<td></td>
 </tr>
 <tr>
 <td>73cf72ab-2528-4836-8b69-062a92da02bb</td>
 <td>ShareFile Outlook Plug-in</td>
-<td></td>
 </tr>
 <tr>
 <td>18952f2a-6e32-4606-9cc2-48dab425ba36</td>
 <td>ShareFile Desktop Widget</td>
-<td></td>
 </tr>
 <tr>
 <td>DF0F00A4-BB7E-4af5-915F-F0A674B2264A</td>
 <td>HDX RealTime Media Engine (aka ‘Lync Accelerator’) from Acosta.</td>
-<td></td>
 </tr>
 <tr>
 <td>4122F203-D87B-4e9c-BE7A-222E4E8A9C6F</td>
 <td>Acceleration Plug-in (not returned by StoreFront Services 1.2)</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -361,14 +342,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Format</th>
 <th>Request Accept /Response Content-Type Header</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Xml</td>
 <td>application/vnd.citrix.roamingaccounts+xml</td>
-<td></td>
 </tr>
 </tbody>
 </table>

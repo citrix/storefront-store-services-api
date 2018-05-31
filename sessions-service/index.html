@@ -254,7 +254,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>Request Content-Type</th>
 <th>Response Content-Type</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -264,7 +263,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>Session Parameters</td>
 <td>Session State</td>
 <td>Returns data on sessions which are available for connection from the client.<br><strong>Note that with the exception of XenDesktop 7 (and later) that this has side-effect of disconnecting sessions if 'active' sessions are queried.</strong></td>
-<td></td>
 </tr>
 <tr>
 <td>/sessions/v1/disconnect/</td>
@@ -272,7 +270,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>Session Parameters</td>
 <td>Session Result</td>
 <td>Disconnect the requested sessions</td>
-<td></td>
 </tr>
 <tr>
 <td>/sessions/v1/logoff/</td>
@@ -280,7 +277,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>Session Parameters</td>
 <td>Session Result</td>
 <td>Logoff the requested sessions</td>
-<td></td>
 </tr>
 <tr>
 <td>/sessions/v1/{session-id}/launch/ica</td>
@@ -288,7 +284,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>Launch Parameters</td>
 <td>Launch Data</td>
 <td>Attempt to launch the specified session using the ica protocol.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -297,14 +292,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Parameter</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>{session-id}</td>
 <td>The identifier of the session.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -324,7 +317,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>Parameter</th>
 <th>Required</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -332,31 +324,26 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>clientName</td>
 <td>Yes</td>
 <td>A string identifying the client. It is the client's responsibility to use a value that will behave appropriately (see notes in Launch section)</td>
-<td></td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>No</td>
 <td>Identifies the device, if specified, it overrides the clientName in identifying the end-point.</td>
-<td></td>
 </tr>
 <tr>
 <td>includeActiveSessions</td>
 <td>No</td>
 <td>A boolean specifying whether to include active sessions. <pre>[true|false]</td>
-<td></td>
 </tr>
 <tr>
 <td>appSessionsOnly</td>
 <td>No</td>
 <td>A Boolean specifying whether to only return only application sessions.<br>A value of true will list app sessions from any XD7 farm and pre- XD7 XenApp app hosting farm. Pre XD7 XenDesktop hosting farms will not be queried so as not to disconnect active desktops (a side effect of querying sessions).<br>Where a XenApp hosts both apps and desktops the session queries will continue to disconnect a users active desktop.<br>Farm exclusion based on version can be overridden to list all farm application sessions by setting the LegacyWorkspaceControl value to on (off is the default) in the Store <farm/> element.<br> <pre>[ true | false ] </pre> with the default being false.</td>
-<td></td>
 </tr>
 <tr>
 <td>tickets</td>
 <td>No</td>
 <td>This parameter is <strong>only used in LogOff and Disconnect session services</strong> and represents a list of tickets that will be invalidated by the server.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -368,34 +355,28 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200</td>
 <td>Success/Failure</td>
-<td></td>
 </tr>
 <tr>
 <td>401</td>
 <td>Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])</td>
-<td></td>
 </tr>
 <tr>
 <td>404</td>
 <td>Session identified by {session-id} was not found</td>
-<td></td>
 </tr>
 <tr>
 <td>400</td>
 <td>POSTed data missing or invalid</td>
-<td></td>
 </tr>
 <tr>
 <td>406</td>
 <td>Unrecognised Accepts Header</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -404,14 +385,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Format</th>
 <th>Request Accept /Response Content-Type Header</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Session State</td>
 <td>application/vnd.citrix.sessionstate+xml</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -427,7 +406,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only)</th>
 <th>Id</th>
 <th>Capabilities</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -435,19 +413,16 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/sessions/v1/available</td>
 <td>ListSessions</td>
 <td>listSessions</td>
-<td></td>
 </tr>
 <tr>
 <td>/sessions/v1/disconnect</td>
 <td>DisconnectSessions</td>
 <td>disconnectSessions</td>
-<td></td>
 </tr>
 <tr>
 <td>/sessions/v1/logoff</td>
 <td>LogOffSessions</td>
 <td>logOffSessions</td>
-<td></td>
 </tr>
 </tbody>
 </table>

@@ -246,7 +246,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only) and Content-Type</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -254,7 +253,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/subscriptions/{resourceId} application/vnd.citrix.subscriptionupdate+xml</td>
 <td>POST</td>
 <td>Action depends upon updateType attribute value:<br><strong>subscribe</strong>: Try to subscribe to the resource. This may create a new subscription (if one does not already exist) and by default will set the subscription to the subscribed state (although later extensions may complicate this behaviour).<br><strong>unsubscribe</strong> : Try to unsubscribe from the resource. This may delete the subscription and by default will set the subscription to the notSubscribed state (although later extensions may complicate this behaviour).<br><strong>update</strong>: Update the data associated with the subscription. This should succeed independent of future extensions, although will return 404 (Not Found) if no subscription exists.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -263,14 +261,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Parameter</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>{resourceId}</td>
 <td>The identifier of the associated resource. This is unique to the instance of the service.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -283,44 +279,36 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code (and friendly name)</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200 (OK)</td>
 <td>Subscription added/removed successfully or conflict occurred, the response content-type indicates which. See Success Response Content and Conflict Response Content sections below. <br>The conflict response is returned in any of the following cases:<ol><li> A request is made to subscribe to a resource in an incompatible state (e.g. subscribed).</li><li> A request is made to unsubscribe from a resource in an incompatible state (e.g. unsubscribed).</li> <li> A request is made to update data for a resource with no subscription record.</li> <li> An unspecified data conflict occurs due to clash with another simultaneous request.</li> <li> An extension (e.g. workflow integration) indicates a conflict in state (see relevant extension specification for details).</li></td>
-<td></td>
 </tr>
 <tr>
 <td>202 (Accepted)</td>
 <td>The request to subscribe/unsubscribe has been accepted, however there is workflow associated with the subscription/unsubscription which must be completed before the action will be complete.</td>
-<td></td>
 </tr>
 <tr>
 <td>400 (Bad Request)</td>
 <td>Missing {id} value or malformed data in the request body.</td>
-<td></td>
 </tr>
 <tr>
 <td>401 (Unauthorized)</td>
 <td>Bad/Missing security token <br> (see CitrixAuth Authentication Scheme document [3])</td>
-<td></td>
 </tr>
 <tr>
 <td>403 (Forbidden)</td>
 <td>The request token did not contain a user security identifier claim (this is required to give a unique identifier for the user for recording subscriptions)</td>
-<td></td>
 </tr>
 <tr>
 <td>404 (Not Found)</td>
 <td>Subscriptions are not enabled or the supplied resourceId does not refer to a resource visible to the requesting user.<br>The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response:<br><strong>ResourceNotFound</strong>: No resource was found for the requesting user for the specified id.<br><strong>SubscriptionsDisabled</strong>: Subscriptions are not enabled for the Store service. (Not expected unless advanced customization is performed on the server.)<br><strong>SubscriptionsReadOnly</strong>: Subscriptions are read only for the Store service</td>
-<td></td>
 </tr>
 <tr>
 <td>503 (Service Unavailable)</td>
 <td>An extension is temporarily unable to contact a service it requires to contact as part of the subscription process (see relevant extension specification for details)</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -331,14 +319,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Format</th>
 <th>Request Accept /Response Content-Type Header</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Xml</td>
 <td>application/vnd.citrix.subscriptionresult+xml</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -353,34 +339,28 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Status</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>notSubscribed</td>
 <td>The resource is not subscribed.</td>
-<td></td>
 </tr>
 <tr>
 <td>subscribed</td>
 <td>The resource is subscribed.</td>
-<td></td>
 </tr>
 <tr>
 <td>approved</td>
 <td>Workflow has run and the user has been granted permission to use the resource. The subscription is awaiting user acknowledgement.</td>
-<td></td>
 </tr>
 <tr>
 <td>denied</td>
 <td>Workflow has run and the user has been denied permission to use the resource. The subscription is awaiting user acknowledgement.</td>
-<td></td>
 </tr>
 <tr>
 <td>All other values</td>
 <td>Workflow is running to determine whether the user may use the resource.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -461,11 +441,21 @@ Content-Type: application/vnd.citrix.subscriptionresult+xml Content-Length: xxxx
 
 
 <h4 id="conflict-response-content"><a class="toclink" href="#conflict-response-content">Conflict Response Content</a></h4>
-<p>In the case that a conflict is returned (HTTP status code 200 (OK)), a response potentially containing data pertaining to the conflict is returned in the response body:
-Response Format|
-Request Accept /Response Content-Type Header|
----|---|
-Xml|application/vnd.citrix.subscriptionconflict+xml|</p>
+<p>In the case that a conflict is returned (HTTP status code 200 (OK)), a response potentially containing data pertaining to the conflict is returned in the response body:</p>
+<table>
+<thead>
+<tr>
+<th>Response Format</th>
+<th>Request Accept /Response Content-Type Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xml</td>
+<td>application/vnd.citrix.subscriptionconflict+xml</td>
+</tr>
+</tbody>
+</table>
 <p>The subscription result content is Xml, described by the schema: /Schemas/Subscriptions.xsd with root node <strong>subscriptionConflict</strong>.</p>
 <p><strong>Note</strong>: The subscriptionconflict content type is intended to allow for extension, and will only contain properties in the case of extensions (e.g. workflow integration).</p>
 <h4 id="conflict-reason"><a class="toclink" href="#conflict-reason">Conflict Reason</a></h4>
@@ -475,29 +465,24 @@ Xml|application/vnd.citrix.subscriptionconflict+xml|</p>
 <tr>
 <th>Reason value</th>
 <th>Meaning</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>GeneralDataStoreConflict</td>
 <td>An undetermined conflict within the subscription data storage (typically due to transaction conflicts).</td>
-<td></td>
 </tr>
 <tr>
 <td>MissingSubscription</td>
 <td>A conflict due to a missing subscription.<br>(e.g. an attempt to unsubscribe or update a subscription to a resource that has never been subscribed.)</td>
-<td></td>
 </tr>
 <tr>
 <td>ConflictingSubscriptionState</td>
 <td>A conflict due to the state of an existing subscription.<br>(e.g. an attempt to subscribe to a resource with a subscription with status subscribed.)</td>
-<td></td>
 </tr>
 <tr>
 <td>GeneralWorkflowConflict</td>
 <td>A conflict caused by an undetermined conflict within the wokflow system.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

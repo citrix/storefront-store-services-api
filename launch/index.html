@@ -249,7 +249,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only)</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -257,10 +256,8 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/{id}/launch/ica</td>
 <td>POST</td>
 <td>Attempt to launch the specified resource using the ICA protocol</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>/resources/v2/{id}/launch/rade</td>
 <td>POST</td>
 <td>Attempt to launch the specified resource using the Rade protocol</td>
@@ -269,7 +266,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/{id}/launch/{protocol}/{retrykey}</td>
 <td>POST</td>
 <td>Retry the attempt to launch the specified resource using the specified protocol</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -278,24 +274,20 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Parameter</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>{id}</td>
 <td>The identifier of the associated resource. This is unique to the instance of the service.</td>
-<td></td>
 </tr>
 <tr>
 <td>{protocol}</td>
 <td>The protocol to be used to launch the resource ('ica' or 'rade')</td>
-<td></td>
 </tr>
 <tr>
 <td>{retrykey}</td>
 <td>The retry key used to identify a launch request that is not ready (see below)</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -315,7 +307,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>Required</th>
 <th>Launch Type</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -324,105 +315,96 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>Optional</td>
 <td>All protocols</td>
 <td>A string identifying the client (any characters except null (0) or newline characters. It is the client's responsibility to use a value that will behave appropriately (see notes below)</td>
-<td></td>
 </tr>
 <tr>
 <td>clientAddress</td>
 <td>Optional</td>
 <td>All protocols</td>
 <td>The IPv4 or IPv6 address of the client, as claimed by the client</td>
-<td></td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>Optional</td>
 <td>All protocols</td>
 <td>A string identifying the client device</td>
-<td></td>
 </tr>
 <tr>
 <td>audio</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>The audio settings for the session, one of the following:<br><pre>[high|medium|low|off]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>colourDepth</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>The colour depth for the session, one of the following: <pre>[16 | 256 | high | truecolor ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>display</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>The display type for the session, one of the following: <pre>[seamless | percent | absolute | fullscreen]</pre></td>
+</tr>
+<tr>
 <td>displayPercent</td>
+<td>Optional</td>
+<td>ica and rade</td>
+<td>Only if display=percent<br>The percentage of the screen to be used for the session <br><pre>[ 0 &lt; percent ≤ 100]</pre></td>
 </tr>
 <tr>
 <td>displayAbsolute</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>Only if display=absolute<br>The x and y extents of the window to be used for the session<br><pre>[ 0 &lt; x,y]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>transparentKeyPassthrough</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>Set the behavior of the windows keys etc., one of the following: <pre>[local | remote | fullscreenonly ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>specialFolderRedirection</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>Are the special folders directed, one of the following: <pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>clearTypeRemoting</td>
 <td>Optional</td>
 <td>ica and rade</td>
 <td>Are ClearType fonts remoted, one of the following: <pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>showDesktopViewer</td>
 <td>Optional</td>
 <td>ica</td>
 <td>Should the desktop viewer be used as the ICA client. <pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>launcher</td>
 <td>Optional</td>
 <td>ica</td>
 <td>Identifier for the launcher program.<br>Any string is allowed, not including null (0) or newline characters.</td>
-<td></td>
 </tr>
 <tr>
 <td>virtualComPort</td>
 <td>Optional</td>
 <td>ica</td>
 <td>If specified, determines the value of the VirtualCOMPortEmulation setting in the WFClient section.<pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>comPortMapping</td>
 <td>Optional</td>
 <td>ica</td>
 <td>If specified, determines the value of the COMAllowed setting in the WFClient section.<pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 <tr>
 <td>clientPrinter</td>
 <td>Optional</td>
 <td>ica</td>
 <td>If specified, determines the values of the CPMAllowed and VSLAllowed settings in the WFClient section.<pre>[true | false ]</pre></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -488,44 +470,36 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Launch error Id</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>AppRemoved</td>
 <td>The resource to launch no longer exists, is no longer enabled or is no longer visible to the current user.</td>
-<td></td>
 </tr>
 <tr>
 <td>NoMoreActiveSessions</td>
 <td>The user is not allowed any more active sessions. Currently applies to XenDesktop only.</td>
-<td></td>
 </tr>
 <tr>
 <td>NotLicensed</td>
 <td>The server does not have the required license to perform the requested activity.</td>
-<td></td>
 </tr>
 <tr>
 <td>UnavailableDesktop</td>
 <td>No workstations are available to service this request. Currently applies to XenDesktop only.</td>
-<td></td>
 </tr>
 <tr>
 <td>CouldNotConnectToWorkstation</td>
 <td>The server refused a connection. Currently applies to XenDesktop only.</td>
-<td></td>
 </tr>
 <tr>
 <td>WorkstationInMaintenance</td>
 <td>The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only.</td>
-<td></td>
 </tr>
 <tr>
 <td>ResourceError <br> GeneralAppLaunchError</td>
 <td>General error that cannot be further specified.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -536,24 +510,20 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Launch retry reason</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>rebooting</td>
 <td>The requested workstation is rebooting.</td>
-<td></td>
 </tr>
 <tr>
 <td>resuming</td>
 <td>The requested workstation is resuming.</td>
-<td></td>
 </tr>
 <tr>
 <td>unknown</td>
 <td>Retry reason not covered by the other values.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -564,14 +534,12 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>remdyHint values</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>restart-desktop</td>
 <td>The problem may be resolved by restarting the desktop.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

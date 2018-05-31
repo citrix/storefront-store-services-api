@@ -240,7 +240,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only)</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -248,13 +247,11 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/{thumbprint}/image[/{size}]</td>
 <td>GET</td>
 <td>Returns the specified image. See below for details on the format and other details of the response.</td>
-<td></td>
 </tr>
 <tr>
 <td>/resources/v2/{thumbprint}/icon</td>
 <td>GET</td>
 <td>Returns the specified icon data in the image/vnd.microsoft.icon format.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -263,24 +260,20 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Parameter</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>{thumbprint}</td>
 <td>The thumbprint for the image/icon. This value is typically generated in the data returned to a GET request to /resources[/{id}] and is generated for the image data at that moment and so may be different in a subsequent call if the image data has changed. This value is also unique to the instance of the service.</td>
-<td></td>
 </tr>
 <tr>
 <td>{size}</td>
 <td>The size of the image to return (defaults to 32 if no value is supplied). Only the values 16, 24, 32, 48, 64, 96, 128, 256 and 512 are supported.</td>
-<td></td>
 </tr>
 <tr>
 <td>clientName, clientAddress</td>
 <td>See Client Name, Client Address and Device Id section above.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -298,29 +291,24 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200 (OK)</td>
 <td>Success</td>
-<td></td>
 </tr>
 <tr>
 <td>401 (Unauthorized)</td>
 <td>Bad/Missing security token (see CitrixAuth Authentication Scheme document [3])</td>
-<td></td>
 </tr>
 <tr>
 <td>400 (Bad Request)</td>
 <td>Invalid size parameter.</td>
-<td></td>
 </tr>
 <tr>
 <td>404</td>
 <td>Unknown/missing thumbprint.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

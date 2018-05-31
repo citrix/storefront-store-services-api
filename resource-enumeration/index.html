@@ -317,24 +317,20 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200</td>
 <td>Success</td>
-<td></td>
 </tr>
 <tr>
 <td>401</td>
 <td>Bad/Missing security token (see CitrixAuth Authentication Scheme document [3] )</td>
-<td></td>
 </tr>
 <tr>
 <td>404</td>
 <td>No resource available for the specified {id} parameter (the resource may not exist or access to it may not be authorized for the requesting user).</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -343,19 +339,16 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <th>Response Format</th>
 <th>Request Accept /Response Content-Type Header</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Resources Xml format</td>
 <td>application/vnd.citrix.resources+xml</td>
-<td></td>
 </tr>
 <tr>
 <td>Resource Xml format</td>
 <td>application/vnd.citrix.resource+xml</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -400,9 +393,9 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>A string identifying the type of the resource. If no extensions are installed, this will be one of the values <strong>‘Citrix.MPS.Application’</strong>, <strong>‘Citrix.MPS.Desktop’</strong> or <strong>‘Citrix.MPS.Document’</strong>.</td>
 </tr>
 <tr>
-<td></td>
 <td>res:playsfiletypes</td>
 <td>fta</td>
+<td>A list of file extensions supported by the resource [Application only]</td>
 </tr>
 <tr>
 <td>res:contentlocation</td>
@@ -557,7 +550,7 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <td>res:aggregatedresource</td>
 <td>core</td>
-<td><pre>true|false</br> value. true if the resource is aggregated.</td>
+<td><pre>true|false</pre>value. true if the resource is aggregated.</td>
 </tr>
 <tr>
 <td>res:publisherresourceid</td>
@@ -579,7 +572,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>Attribute (namespace)</th>
 <th>Value</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -587,16 +579,13 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>enumeration (http://citrix.com/delivery- services/2-0 resources)</td>
 <td>full</td>
 <td>All the aggregated Xml Services responded</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>partial</td>
 <td>Some of the aggregated Xml Services responded</td>
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td>failed</td>
 <td>None of the aggregated Xml Services responded</td>
 <td></td>
@@ -605,16 +594,13 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>subscriptionsstatus (http://citrix.com/delivery- services/2-0/subscriptions)</td>
 <td>enabled</td>
 <td>Subscriptions enabled</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>disabled</td>
 <td>Subscriptions disabled</td>
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td>unavailable</td>
 <td>Subscriptions enabled, but database currently unavailable.</td>
 <td></td>
@@ -628,7 +614,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only)</th>
 <th>Id</th>
 <th>Capabilities</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -636,13 +621,11 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/withoutautoprovision</td>
 <td>ListResources</td>
 <td>ResourcesEnumerationV2 + 'group:<groupname>' for each supported group name.</td>
-<td></td>
 </tr>
 <tr>
 <td>/resources/v2</td>
 <td>ListResourcesWithAutoProvision</td>
 <td>ResourcesEnumerationV2 AutoProvision + 'group:<groupname>' for each supported group name.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

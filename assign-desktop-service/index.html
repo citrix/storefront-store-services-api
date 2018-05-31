@@ -243,7 +243,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>URL (indicative only) and Content-Type</th>
 <th>Method</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -251,7 +250,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>/resources/v2/{resourceId}/assigndesktop Application/vnd.citrix.assigndesktop+xml</td>
 <td>POST</td>
 <td>Assigns the desktop indicated by the resourceId.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -268,19 +266,16 @@ results of an enumeration request (eg /resources/v2/ or /resources/v2/{id}).
 <tr>
 <th>Response Code (and friendly name)</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>200 (OK)</td>
 <td>The desktop assignment operation has been attempted and the response xml document (Content-Type: application/vnd.citrix.assigndekstop+xml) indicates whether the operation succeeded.<br>The response xml document is described by the schema /Schemas/AssignDesktop.xsd.</td>
-<td></td>
 </tr>
 <tr>
 <td>404 (Not Found)</td>
 <td>The specified resource does not support the assign operation.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -291,29 +286,24 @@ results of an enumeration request (eg /resources/v2/ or /resources/v2/{id}).
 <tr>
 <th>Error Code</th>
 <th>Description</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>no-available-workstation</td>
 <td>No VDAs are available to process this request.</td>
-<td></td>
 </tr>
 <tr>
 <td>connection-refused</td>
 <td>The server refused a connection.</td>
-<td></td>
 </tr>
 <tr>
 <td>resource-unavailable</td>
 <td>The desktop is no longer available to the user.</td>
-<td></td>
 </tr>
 <tr>
 <td>unspecified</td>
 <td>Unspecified error.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

@@ -250,7 +250,6 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <th>Description as returned by StoreFront Services.</th>
 <th>Keywords</th>
 <th>Properties</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -259,42 +258,36 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <td>"My description"</td>
 <td>\<keywords/></td>
 <td>\<properties/></td>
-<td></td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: kw1 kw2 (Description with keyword mark-up)</td>
 <td>"My description"</td>
 <td>\<keywords> <br>\<keyword>kw1\</keyword> <br>\<keyword>kw2\</keyword><br> \</keywords></td>
 <td>\<properties/></td>
-<td></td>
 </tr>
 <tr>
 <td>"My description keywords: name1=a name2=b name1="the rain in Spain" (Description with keyword and property mark-up)</td>
 <td>"My description"</td>
 <td>\<keywords/></td>
 <td>\<properties><br>\<property propertyId="name1"><br>\<value>a\</value>\<value>The rain in Spain\</value> \</property>\<property propertyId="name2"><br>\<value>b\<value><br>\</property><br>\</properties></td>
-<td></td>
 </tr>
 <tr>
-<td>"My description keywrds: name1=a name2=b" (Description with misformatted mark-up - a misspelled KEYWORDS: token)</td>
+<td>"My description keywords: name1=a name2=b" (Description with misformatted mark-up - a misspelled KEYWORDS: token)</td>
 <td>"My description keywrds: name1=a name2=b "</td>
 <td>\<keywords></td>
 <td>\<properties/></td>
-<td></td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: kw1 name1=a kw2 name2=b kw3" (Description with interspersed keywords and properties.)</td>
 <td>"My description"</td>
 <td>\<keywords> <br>\<keyword>kw1\</keyword> <br>\<keyword>kw2\</keyword><br>\<keyword>kw3\</keyword><br>\<keywords></td>
 <td>\<properties><br>\<property propertyId="name1"><br>\<value>a\</value> <br>\</property><br>\<property propertyId="name2"><br>\<value>b\</value><br>\</property><br>\</properties></td>
-<td></td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: name1=a Name1=b "(Property names are case- sensitive.)</td>
 <td>"My description"</td>
 <td>\<keywords/></td>
 <td>\<property propertyId="name1"><br>\<value>a\</value><br>\</property><br>\<property propertyId="Name1"><br>\<value>b\</value><br>\</property><br>\</properties></td>
-<td></td>
 </tr>
 </tbody>
 </table> 

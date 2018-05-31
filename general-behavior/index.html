@@ -267,23 +267,19 @@ the first understood value is used.</p>
 <ul>
 <li>Accounts service: defined relative to host.</li>
 <li>Discovery Service: defined relative to the hosting Store. </li>
-<li>Endpoints Service: defined relative to the hosting Store.</li>
+<li>Endpoints Service: defined relative to the hosting Store. <ul>
+<li>Use the endpoints service to identify URLs (the endpoint id and capabilities of each service are listed in this document).</li>
+<li>Use the HTTP Accepts header to indicate which version of a response is required, avoid wildcards and ask explicitly for the content-types the client understands; ideally including older content-types for greater backwards compatibility. In the future, if the responses to certain services are changed significantly, then new schema and associated content-type will be defined. The Accepts header of the HTTP request will be used to determine which version(s) of the response the client is able to handle and typically the most recent of those will be returned. For example, consider a service with 2 versions with associated content types v1 and v2:</li>
 </ul>
 </li>
-<li>
-<p>Use the endpoints service to identify URLs (the endpoint id and capabilities of each service are listed in this document).</p>
-</li>
-<li>
-<p>Use the HTTP Accepts header to indicate which version of a response is required, avoid wildcards and ask explicitly for the content-types the client understands; ideally including older content-types for greater backwards compatibility. In the future, if the responses to certain services are changed significantly, then new schema and associated content-type will be defined. The Accepts header of the HTTP request will be used to determine which version(s) of the response the client is able to handle and typically the most recent of those will be returned. For example, consider a service with 2 versions with associated content types v1 and v2:</p>
-<ul>
 <li>An older client written when only v1 existed would request the content-type v1 and so receive the older v1 format which it understands.</li>
 <li>A newer client with backwards 7ompatibility would request both v2 and v1 (in that order). Speaking to an older server it would get back the older v1 format, to a newer server the newer v2 format.</li>
 <li>A newer client written without concerns for compatibility back to the older format would just request v2. It would work with newer servers, but not older servers where it would receive an HTTP 406 error response.</li>
-<li>A ‘badly written’ older client which understood only the v1 format, but used */* as its accepts header, would work with older servers, but with newer servers it would receive a v2 format response which it would fail to parse.</li>
+<li>A ‘badly written’ older client which understood only the v1 format, but used */* as its accepts header, would work with older servers, but with newer servers it would receive a v2 format response which it would fail to parse.<ul>
+<li>Ignore unexpected extra elements or values in returned Xml. The schemas supplied in this specification should not be taken to preclude future versions from including extra elements. Where changes are significant, and not merely the addition of elements or attributes, new schemas and content types will be defined.</li>
 </ul>
 </li>
-<li>
-<p>Ignore unexpected extra elements or values in returned Xml. The schemas supplied in this specification should not be taken to preclude future versions from including extra elements. Where changes are significant, and not merely the addition of elements or attributes, new schemas and content types will be defined.</p>
+</ul>
 </li>
 </ul>
 </li>
