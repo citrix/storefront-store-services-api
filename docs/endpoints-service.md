@@ -5,16 +5,16 @@ This service returns a list of all the endpoints available with their associated
 **Note**: The endpoints service is not limited to the Store service (it is shared with, for example, the authentication service), but is defined here.
 
 ##Request
-URL|Method|Description|
----|---|---|/endpoints/v1/|GET|Returns the list of all the endpoints available.|
+|URL|Method|Description|
+|---|---|---||/endpoints/v1/|GET|Returns the list of all the endpoints available.|
 
 **Notes**:
 
 * The request does not require an Authorisation token.
 
 ##Response
-Response Code|Description|
----|---|200|Success
+|Response Code|Description|
+|---|---||200|Success|
 
 ##Success Response Content
 In the case that a successful reponse is returned, the response body contains an Xml document giving the list of endpoints available. Each endpoint has the following data:
@@ -23,8 +23,8 @@ In the case that a successful reponse is returned, the response body contains an
 * url: The absolute URL of the endpoint.
 * capabilities: A list of strings identifying the capabilities supported by the endpoint.
 
-Response Format|Request Accept /Response Content-Type Header|
----|---|Xml|application/vnd.citrix.endpoints+xml|
+|Response Format|Request Accept /Response Content-Type Header|
+|---|---||Xml|application/vnd.citrix.endpoints+xml|
 
 The result content is Xml described by the schema: /Schemas/Endpoints.xsd.
 

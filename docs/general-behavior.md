@@ -34,16 +34,13 @@ The Store services are intended to be backwards and forwards compatible in the f
 
 		* Accounts service: defined relative to host.
 		* Discovery Service: defined relative to the hosting Store. 
-		* Endpoints Service: defined relative to the hosting Store.
-		
+		* Endpoints Service: defined relative to the hosting Store.	
 	* Use the endpoints service to identify URLs (the endpoint id and capabilities of each service are listed in this document).
 	* Use the HTTP Accepts header to indicate which version of a response is required, avoid wildcards and ask explicitly for the content-types the client understands; ideally including older content-types for greater backwards compatibility. In the future, if the responses to certain services are changed significantly, then new schema and associated content-type will be defined. The Accepts header of the HTTP request will be used to determine which version(s) of the response the client is able to handle and typically the most recent of those will be returned. For example, consider a service with 2 versions with associated content types v1 and v2:
-	
 		* An older client written when only v1 existed would request the content-type v1 and so receive the older v1 format which it understands.
 		* A newer client with backwards 7ompatibility would request both v2 and v1 (in that order). Speaking to an older server it would get back the older v1 format, to a newer server the newer v2 format.
 		* A newer client written without concerns for compatibility back to the older format would just request v2. It would work with newer servers, but not older servers where it would receive an HTTP 406 error response.
 		* A ‘badly written’ older client which understood only the v1 format, but used \*/* as its accepts header, would work with older servers, but with newer servers it would receive a v2 format response which it would fail to parse.
-
 	* Ignore unexpected extra elements or values in returned Xml. The schemas supplied in this specification should not be taken to preclude future versions from including extra elements. Where changes are significant, and not merely the addition of elements or attributes, new schemas and content types will be defined.
 
 ##Client Name, Client Address and Device Id

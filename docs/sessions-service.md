@@ -9,10 +9,10 @@ There are methods available through the NFuse protocol for tracking ICA sessions
 
 As the current behaviour is neither safe nor idempotent, all requests require the use of the POST verb.
 
-##RequestURL (indicative only)|Method|Request Content-Type|Response Content-Type|Description|
----|---|---|---|---|
-/sessions/v1/available|POST|Session Parameters|Session State|Returns data on sessions which are available for connection from the client.<br>**Note that with the exception of XenDesktop 7 (and later) that this has side-effect of disconnecting sessions if 'active' sessions are queried.**|/sessions/v1/disconnect/|POST|Session Parameters|Session Result|Disconnect the requested sessions|/sessions/v1/logoff/|POST|Session Parameters|Session Result|Logoff the requested sessions|/sessions/v1/{session-id}/launch/ica|POST|Launch Parameters|Launch Data|Attempt to launch the specified session using the ica protocol.| Parameter|Description
----|---|{session-id}|The identifier of the session.
+##Request|URL (indicative only)|Method|Request Content-Type|Response Content-Type|Description|
+|---|---|---|---|---|
+|/sessions/v1/available|POST|Session Parameters|Session State|Returns data on sessions which are available for connection from the client.<br>**Note that with the exception of XenDesktop 7 (and later) that this has side-effect of disconnecting sessions if 'active' sessions are queried.**||/sessions/v1/disconnect/|POST|Session Parameters|Session Result|Disconnect the requested sessions||/sessions/v1/logoff/|POST|Session Parameters|Session Result|Logoff the requested sessions||/sessions/v1/{session-id}/launch/ica|POST|Launch Parameters|Launch Data|Attempt to launch the specified session using the ica protocol.| |Parameter|Description|
+|---|---||{session-id}|The identifier of the session.|
 **Notes**:
 
 * These requests require an Authorisation token
@@ -23,27 +23,27 @@ As the current behaviour is neither safe nor idempotent, all requests require th
 
 ##Request Parameters
 The following information is required by the requests to the session service. The data is sent as Xml in the body of the POST described by the schema: /Schemas/SessionParameters.xsd
-Parameter|Required|Description|
----|---|---|clientName|Yes|A string identifying the client. It is the client's responsibility to use a value that will behave appropriately (see notes in Launch section)|deviceId|No|Identifies the device, if specified, it overrides the clientName in identifying the end-point.includeActiveSessions|No|A boolean specifying whether to include active sessions. <pre>\[true\|false\]
-appSessionsOnly|No|A Boolean specifying whether to only return only application sessions.<br>A value of true will list app sessions from any XD7 farm and pre- XD7 XenApp app hosting farm. Pre XD7 XenDesktop hosting farms will not be queried so as not to disconnect active desktops (a side effect of querying sessions).<br>Where a XenApp hosts both apps and desktops the session queries will continue to disconnect a users active desktop.<br>Farm exclusion based on version can be overridden to list all farm application sessions by setting the LegacyWorkspaceControl value to on (off is the default) in the Store <farm/> element.<br> <pre>\[ true \| false \] </pre> with the default being false.|
-tickets|No|This parameter is **only used in LogOff and Disconnect session services** and represents a list of tickets that will be invalidated by the server.
+|Parameter|Required|Description|
+|---|---|---||clientName|Yes|A string identifying the client. It is the client's responsibility to use a value that will behave appropriately (see notes in Launch section)||deviceId|No|Identifies the device, if specified, it overrides the clientName in identifying the end-point.||includeActiveSessions|No|A boolean specifying whether to include active sessions. <pre>\[true\|false\]|
+|appSessionsOnly|No|A Boolean specifying whether to only return only application sessions.<br>A value of true will list app sessions from any XD7 farm and pre- XD7 XenApp app hosting farm. Pre XD7 XenDesktop hosting farms will not be queried so as not to disconnect active desktops (a side effect of querying sessions).<br>Where a XenApp hosts both apps and desktops the session queries will continue to disconnect a users active desktop.<br>Farm exclusion based on version can be overridden to list all farm application sessions by setting the LegacyWorkspaceControl value to on (off is the default) in the Store <farm/> element.<br> <pre>\[ true \| false \] </pre> with the default being false.|
+|tickets|No|This parameter is **only used in LogOff and Disconnect session services** and represents a list of tickets that will be invalidated by the server.|
 **Note**: The presence of the session parameters shall be signaled by setting the Content-Type of the POST to be: 
 <pre>application/vnd.citrix.sessionparams+xml</pre>
 
 ##Response
 
-Response Code|Description
----|---|200|Success/Failure|401|Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])|404|Session identified by {session-id} was not found|400|POSTed data missing or invalid|406|Unrecognised Accepts Header|
-Response Format|Request Accept /Response Content-Type Header
----|---|Session State|application/vnd.citrix.sessionstate+xml
+|Response Code|Description|
+|---|---||200|Success/Failure||401|Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])||404|Session identified by {session-id} was not found||400|POSTed data missing or invalid||406|Unrecognised Accepts Header|
+|Response Format|Request Accept /Response Content-Type Header|
+|---|---||Session State|application/vnd.citrix.sessionstate+xml|
 **Notes**:
 
 * The Response to the Request for session information returns Session Data, the schema for which can be found at: /Schemas/SessionState.xsd.
 * The Response to the Request to disconnect or logoff returns Session Result Data, that describes the success or failure of the entire operation. This data is Xml, described by the schema: /Schemas/SessionResult.xsd.
 
 ##Endpoints
-URL (indicative only)|Id|Capabilities
----|---|---|/sessions/v1/available|ListSessions|listSessions/sessions/v1/disconnect|DisconnectSessions|disconnectSessions/sessions/v1/logoff|LogOffSessions|logOffSessions
+|URL (indicative only)|Id|Capabilities|
+|---|---|---||/sessions/v1/available|ListSessions|listSessions||/sessions/v1/disconnect|DisconnectSessions|disconnectSessions||/sessions/v1/logoff|LogOffSessions|logOffSessions|
 
 ###Example: Request Session Information
 In this example all sessions are requested by not qualifying the server and client types.####Request

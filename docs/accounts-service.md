@@ -2,14 +2,16 @@
 This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://<host>/Citrix/<StoreName>/ (where <host> is the single server or cluster hostname for the installation, and <StoreName> the name of the store), the accounts service has the base url http(s)://<host>/Citrix/Roaming/
 
 ##Request
-URL|Method|Description
----|---|---|/Citrix/Roaming/accounts|GET/POST|Returns the list of available accounts with full details.|/Citrix/Roaming/accounts?summary|GET/POST|Returns the list of available accounts, as summaries, i.e. no details.
+|URL|Method|Description|
+|---|---|---||/Citrix/Roaming/accounts|GET/POST|Returns the list of available accounts with full details.||/Citrix/Roaming/accounts?summary|GET/POST|Returns the list of available accounts, as summaries, i.e. no details.|
 
 **Note**: These requests may require an Authorisation token depending on the Stores configuration. Authorisation is only required if all Stores require authentication and share the same authentication service and authentication protocols. Future releases may remove authentication entirely from this service.
 
 ##Response
-Response Code|Description|
----|---|200|Success|
+
+|Response Code|Description|
+|---|---||200|Success|
+
 ##Success Response Content
 In the case that a successful reponse is returned, the response body contains an Xml document giving the list of accounts available, described by the schema: /Schemas/Accounts.xsd
 
@@ -32,10 +34,10 @@ From the Accounts Xml format, metadata (plug-ins, trust settings and properties)
 
 ###Plug-ins
 The plug-in values which may be returned by the account service are as follows:
-Plug-in value|Description|
----|---|
-A9852000-047D-11DD-95FF-0800200C9A66|Receiver (Online)|
-2C882560-4469-4E65-9EBE-4A842840F273|Offline Plug-inb9852000-041d-11ff-25ff-0800400c9a66|VPN73cf72ab-2528-4836-8b69-062a92da02bb|ShareFile Outlook Plug-in18952f2a-6e32-4606-9cc2-48dab425ba36|ShareFile Desktop WidgetDF0F00A4-BB7E-4af5-915F-F0A674B2264A|HDX RealTime Media Engine (aka ‘Lync Accelerator’) from Acosta.4122F203-D87B-4e9c-BE7A-222E4E8A9C6F|Acceleration Plug-in (not returned by StoreFront Services 1.2)
+|Plug-in value|Description|
+|---|---|
+|A9852000-047D-11DD-95FF-0800200C9A66|Receiver (Online)|
+|2C882560-4469-4E65-9EBE-4A842840F273|Offline Plug-in||b9852000-041d-11ff-25ff-0800400c9a66|VPN||73cf72ab-2528-4836-8b69-062a92da02bb|ShareFile Outlook Plug-in||18952f2a-6e32-4606-9cc2-48dab425ba36|ShareFile Desktop Widget||DF0F00A4-BB7E-4af5-915F-F0A674B2264A|HDX RealTime Media Engine (aka ‘Lync Accelerator’) from Acosta.||4122F203-D87B-4e9c-BE7A-222E4E8A9C6F|Acceleration Plug-in (not returned by StoreFront Services 1.2)|
 **Note**: These are equivalent values to those used by Merchandising Server
 
 ###Trust Settings
@@ -44,8 +46,8 @@ These specify the trust settings for various aspects of the client. Values can b
 ###Properties
 These allow arbitrary data to be associated with a service and are intended as an extension mechanism.
 
-Response Format|Request Accept /Response Content-Type Header
----|---|Xml|application/vnd.citrix.roamingaccounts+xml
+|Response Format|Request Accept /Response Content-Type Header|
+|---|---||Xml|application/vnd.citrix.roamingaccounts+xml|
 
 ##Account Service Example
 This is an example of a client discovering the latest account information for a user. It assumes that the client has already authenticated and has a suitable authorization token, so the authentication exchange is not shown. This example illustrates the use of contentHash and the summary request. This does not imply that using the summary request is necessarily the best way to query account information as the cost of two network round-trips may outweigh the saved bandwidth for occasions where the second request is saved because the account data has not changed.

@@ -5,8 +5,8 @@ This service allows a desktop to be assigned to a particular user (the user is i
 ##Request
 This service allows a desktop to be assigned to a particular user (the user is identified by the security token in the request.
 
-URL (indicative only) and Content-Type|Method| Description|
----|---|---|/resources/v2/{resourceId}/assigndesktop Application/vnd.citrix.assigndesktop+xml|POST|Assigns the desktop indicated by the resourceId.
+|URL (indicative only) and Content-Type|Method| Description|
+|---|---|---||/resources/v2/{resourceId}/assigndesktop Application/vnd.citrix.assigndesktop+xml|POST|Assigns the desktop indicated by the resourceId.|
 
 **Notes**:
 
@@ -15,13 +15,13 @@ results of an enumeration request (eg /resources/v2/ or /resources/v2/{id}).
 <br>**Request data**
 * The POSTed requests are Xml, described by the schema: /Schemas/AssignDesktopParams.xsd, with top level element assigndesktopparams.
 
-##ResponseResponse Code (and friendly name)|Description|
----|---|200 (OK)|The desktop assignment operation has been attempted and the response xml document (Content-Type: application/vnd.citrix.assigndekstop+xml) indicates whether the operation succeeded.<br>The response xml document is described by the schema /Schemas/AssignDesktop.xsd.|404 (Not Found)|The specified resource does not support the assign operation.
+##Response|Response Code (and friendly name)|Description|
+|---|---||200 (OK)|The desktop assignment operation has been attempted and the response xml document (Content-Type: application/vnd.citrix.assigndekstop+xml) indicates whether the operation succeeded.<br>The response xml document is described by the schema /Schemas/AssignDesktop.xsd.||404 (Not Found)|The specified resource does not support the assign operation.|
 
 ##Response Error Codes
 The following error codes can be returned for errors in assigning a desktop:
 
-Error Code|Description---|---|no-available-workstation|No VDAs are available to process this request.|connection-refused|The server refused a connection.resource-unavailable|The desktop is no longer available to the user.unspecified|Unspecified error.
+|Error Code|Description||---|---||no-available-workstation|No VDAs are available to process this request.||connection-refused|The server refused a connection.||resource-unavailable|The desktop is no longer available to the user.||unspecified|Unspecified error.|
 
 ###Example: Assign Desktop Success
 ####Request

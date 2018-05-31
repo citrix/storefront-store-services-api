@@ -1,9 +1,9 @@
 #Launch
-##RequestURL (indicative only)|Method|Description|---|---|---|
-/resources/v2/{id}/launch/ica|POST|Attempt to launch the specified resource using the ICA protocol||/resources/v2/{id}/launch/rade|POST|Attempt to launch the specified resource using the Rade protocol|/resources/v2/{id}/launch/{protocol}/{retrykey}|POST|Retry the attempt to launch the specified resource using the specified protocol|
-Parameter|Description|
----|---|
-{id}|The identifier of the associated resource. This is unique to the instance of the service.|{protocol}|The protocol to be used to launch the resource ('ica' or 'rade')|{retrykey}|The retry key used to identify a launch request that is not ready (see below)|
+##Request|URL (indicative only)|Method|Description||---|---|---|
+|/resources/v2/{id}/launch/ica|POST|Attempt to launch the specified resource using the ICA protocol||/resources/v2/{id}/launch/rade|POST|Attempt to launch the specified resource using the Rade protocol||/resources/v2/{id}/launch/{protocol}/{retrykey}|POST|Retry the attempt to launch the specified resource using the specified protocol|
+|Parameter|Description|
+|---|---|
+|{id}|The identifier of the associated resource. This is unique to the instance of the service.||{protocol}|The protocol to be used to launch the resource ('ica' or 'rade')||{retrykey}|The retry key used to identify a launch request that is not ready (see below)|
 **Notes**:
 
 * These requests require an Authorisation token.
@@ -12,9 +12,10 @@
 * If subscriptions are enabled, then unsubscribed resources are prevented from launching.
 
 ##Launch Parameters
-The following information is required by the launch process, which is sent as POSTed Xml, described by the schema: /Schemas/LaunchParams.xsdParameter|Required|Launch Type|Description
----|---|---|---|clientName|Optional|All protocols|A string identifying the client (any characters except null (0) or newline characters. It is the client's responsibility to use a value that will behave appropriately (see notes below)clientAddress|Optional|All protocols|The IPv4 or IPv6 address of the client, as claimed by the client|deviceId|Optional|All protocols|A string identifying the client device|audio|Optional|ica and rade|The audio settings for the session, one of the following:<br><pre>\[high\|medium\|low\|off\]</pre>|colourDepth|Optional|ica and rade|The colour depth for the session, one of the following: <pre>\[16 \| 256 \| high \| truecolor \]</pre>|display|Optional|ica and rade|The display type for the session, one of the following: <pre>\[seamless \| percent \| absolute \| fullscreen\]</pre>|displayPercent|Optional|ica and rade|Only if display=percent<br>The percentage of the screen to be used for the session <br><pre>\[ 0 < percent ≤ 100\]</pre>|displayAbsolute|Optional|ica and rade|Only if display=absolute<br>The x and y extents of the window to be used for the session<br><pre>\[ 0 < x,y\]</pre>|transparentKeyPassthrough|Optional|ica and rade|Set the behavior of the windows keys etc., one of the following: <pre>\[local \| remote \| fullscreenonly \]</pre>|
-specialFolderRedirection|Optional|ica and rade|Are the special folders directed, one of the following: <pre>\[true \| false \]</pre>|clearTypeRemoting|Optional|ica and rade|Are ClearType fonts remoted, one of the following: <pre>\[true \| false \]</pre>showDesktopViewer|Optional|ica|Should the desktop viewer be used as the ICA client. <pre>\[true \| false \]</pre>|launcher|Optional|ica|Identifier for the launcher program.<br>Any string is allowed, not including null (0) or newline characters.|virtualComPort|Optional|ica|If specified, determines the value of the VirtualCOMPortEmulation setting in the WFClient section.<pre>\[true \| false \]</pre>comPortMapping|Optional|ica|If specified, determines the value of the COMAllowed setting in the WFClient section.<pre>\[true \| false \]</pre>|clientPrinter|Optional| ica|If specified, determines the values of the CPMAllowed and VSLAllowed settings in the WFClient section.<pre>\[true \| false \]</pre>
+The following information is required by the launch process, which is sent as POSTed Xml, described by the schema: /Schemas/LaunchParams.xsd|Parameter|Required|Launch Type|Description|
+|---|---|---|---||clientName|Optional|All protocols|A string identifying the client (any characters except null (0) or newline characters. It is the client's responsibility to use a value that will behave appropriately (see notes below)||clientAddress|Optional|All protocols|The IPv4 or IPv6 address of the client, as claimed by the client||deviceId|Optional|All protocols|A string identifying the client device||audio|Optional|ica and rade|The audio settings for the session, one of the following:<br><pre>\[high\|medium\|low\|off\]</pre>||colourDepth|Optional|ica and rade|The colour depth for the session, one of the following: <pre>\[16 \| 256 \| high \| truecolor \]</pre>||display|Optional|ica and rade|The display type for the session, one of the following: <pre>\[seamless \| percent \| absolute \| fullscreen\]</pre>|
+|displayPercent|Optional|ica and rade|Only if display=percent<br>The percentage of the screen to be used for the session <br><pre>\[ 0 < percent ≤ 100\]</pre>||displayAbsolute|Optional|ica and rade|Only if display=absolute<br>The x and y extents of the window to be used for the session<br><pre>\[ 0 < x,y\]</pre>||transparentKeyPassthrough|Optional|ica and rade|Set the behavior of the windows keys etc., one of the following: <pre>\[local \| remote \| fullscreenonly \]</pre>|
+|specialFolderRedirection|Optional|ica and rade|Are the special folders directed, one of the following: <pre>\[true \| false \]</pre>||clearTypeRemoting|Optional|ica and rade|Are ClearType fonts remoted, one of the following: <pre>\[true \| false \]</pre>||showDesktopViewer|Optional|ica|Should the desktop viewer be used as the ICA client. <pre>\[true \| false \]</pre>||launcher|Optional|ica|Identifier for the launcher program.<br>Any string is allowed, not including null (0) or newline characters.||virtualComPort|Optional|ica|If specified, determines the value of the VirtualCOMPortEmulation setting in the WFClient section.<pre>\[true \| false \]</pre>||comPortMapping|Optional|ica|If specified, determines the value of the COMAllowed setting in the WFClient section.<pre>\[true \| false \]</pre>||clientPrinter|Optional| ica|If specified, determines the values of the CPMAllowed and VSLAllowed settings in the WFClient section.<pre>\[true \| false \]</pre>|
 
 **Notes**:
 
@@ -28,11 +29,11 @@ specialFolderRedirection|Optional|ica and rade|Are the special folders directed,
 	
 **Note**: If the resources are being accessed through Access Gateway, then the clientName is specified by the gateway.
 
-##Response| Response Code|Description|
-| ---|---|| 200|Success/Retry required/failure|| 401|Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])|| 404|Resource identified by {id} was not available for launch. The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response: <br>ResourceNotFound: No resource was found for the requesting user for the specified id.<br>**ResourceDisabled**: The resource was found but was not enabled.<br>**UnsupportedOperation**: ICA launch was not supported for this resource.<br>**SubscriptionStatusInvalid**: Workflow was enabled for the resource but was not in the subscribed state.<br>**SubscriptionStatusUnknown**: Workflow was enabled for the resource, but the system was unable to determine the subscription state.|
+##Response|Response Code|Description|
+|---|---||200|Success/Retry required/failure||401|Bad/Missing security token <br>(see CitrixAuth Authentication Scheme document [3])||404|Resource identified by {id} was not available for launch. The reason is indicated by the X-Citrix-Error-Reason header value in the HTTP response: <br>ResourceNotFound: No resource was found for the requesting user for the specified id.<br>**ResourceDisabled**: The resource was found but was not enabled.<br>**UnsupportedOperation**: ICA launch was not supported for this resource.<br>**SubscriptionStatusInvalid**: Workflow was enabled for the resource but was not in the subscribed state.<br>**SubscriptionStatusUnknown**: Workflow was enabled for the resource, but the system was unable to determine the subscription state.|
 
-| Response Format|Request Accept /Response Content-Type Header|
-|---|---|| Xml|application/vnd.citrix.launchdata+xml|
+|Response Format|Request Accept /Response Content-Type Header|
+|---|---||Xml|application/vnd.citrix.launchdata+xml|
 
 The response returns data regarding the launch request that can be categorised as: Success, Retry required, or Failure. A retry is required, for example, when a desktop has to be started before a connection can be made to it. The data returned in the response is Xml described by the schema: /Schemas/LaunchData.xsd.
 
@@ -45,21 +46,21 @@ logonTicket : Specifies any logon ticket that might have been generated for the 
 
 ##Failed Launch Error Codes
 If the response represents a failed launch (launch type ‘error’), then the contained error id will be one of the following values:
-Launch error Id|Description|
----|---|AppRemoved|The resource to launch no longer exists, is no longer enabled or is no longer visible to the current user.|NoMoreActiveSessions|The user is not allowed any more active sessions. Currently applies to XenDesktop only.|NotLicensed|The server does not have the required license to perform the requested activity.|UnavailableDesktop|No workstations are available to service this request. Currently applies to XenDesktop only.|CouldNotConnectToWorkstation|The server refused a connection. Currently applies to XenDesktop only.|WorkstationInMaintenance|The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only.|ResourceError <br> GeneralAppLaunchError|General error that cannot be further specified.|
+|Launch error Id|Description|
+|---|---||AppRemoved|The resource to launch no longer exists, is no longer enabled or is no longer visible to the current user.||NoMoreActiveSessions|The user is not allowed any more active sessions. Currently applies to XenDesktop only.||NotLicensed|The server does not have the required license to perform the requested activity.||UnavailableDesktop|No workstations are available to service this request. Currently applies to XenDesktop only.||CouldNotConnectToWorkstation|The server refused a connection. Currently applies to XenDesktop only.||WorkstationInMaintenance|The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only.||ResourceError <br> GeneralAppLaunchError|General error that cannot be further specified.|
 ##Retry Reason Codes
 If the response represents a delayed launch (launch type ‘’retry”), then the contained retryReason will be one of the following values:
 
-Launch retry reason|Description
----|---|rebooting|The requested workstation is rebooting.|
-resuming|The requested workstation is resuming.|
-unknown|Retry reason not covered by the other values.|
+|Launch retry reason|Description|
+|---|---||rebooting|The requested workstation is rebooting.|
+|resuming|The requested workstation is resuming.|
+|unknown|Retry reason not covered by the other values.|
 
 ###Remedy Hint Codes
 If the response represents a delayed or failed launch, then the response may contain a remedyHint value with one of the following values:
 
-remdyHint values|Description|
----|---|restart-desktop|The problem may be resolved by restarting the desktop.
+|remdyHint values|Description|
+|---|---||restart-desktop|The problem may be resolved by restarting the desktop.|
 
 ##Launch Examples
 ###Example: Successful Ica launch

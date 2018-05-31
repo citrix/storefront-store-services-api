@@ -1,10 +1,10 @@
 #Images and Icons
 These services return the appropriate image/icon for a specified thumbprint. The two services are related, in that each is used to retrieve image data relating to one or more resource using the concept of a 'thumbprint' to allow sharing of image data for resources with equivalent images. The 'thumbprint' is designed to be the same for images with the same content. The services differ in that the image service will allow different sizes and format of image to be returned as desired by the caller, possibly resizing the raw images, while the icon service will always return all of the raw images combined into a single file in the Microsoft icon (.ico) format.
 
-##RequestURL (indicative only)|Method|Description|
----|---|---|/resources/v2/{thumbprint}/image[/{size}]|GET|Returns the specified image. See below for details on the format and other details of the response.|/resources/v2/{thumbprint}/icon|GET|Returns the specified icon data in the image/vnd.microsoft.icon format.|
-Parameter|Description|---|---|{thumbprint}|The thumbprint for the image/icon. This value is typically generated in the data returned to a GET request to /resources[/{id}] and is generated for the image data at that moment and so may be different in a subsequent call if the image data has changed. This value is also unique to the instance of the service.|
-{size}|The size of the image to return (defaults to 32 if no value is supplied). Only the values 16, 24, 32, 48, 64, 96, 128, 256 and 512 are supported.|clientName, clientAddress|See Client Name, Client Address and Device Id section above.|
+##Request|URL (indicative only)|Method|Description|
+|---|---|---||/resources/v2/{thumbprint}/image[/{size}]|GET|Returns the specified image. See below for details on the format and other details of the response.||/resources/v2/{thumbprint}/icon|GET|Returns the specified icon data in the image/vnd.microsoft.icon format.|
+|Parameter|Description||---|---||{thumbprint}|The thumbprint for the image/icon. This value is typically generated in the data returned to a GET request to /resources[/{id}] and is generated for the image data at that moment and so may be different in a subsequent call if the image data has changed. This value is also unique to the instance of the service.|
+|{size}|The size of the image to return (defaults to 32 if no value is supplied). Only the values 16, 24, 32, 48, 64, 96, 128, 256 and 512 are supported.||clientName, clientAddress|See Client Name, Client Address and Device Id section above.|
 **Notes**:
 
 * These requests require an Authorisation token
@@ -14,12 +14,12 @@ These services return the appropriate image/icon for a specified thumbprint. The
 * The images service will always return an image of the requested format and size (or its best choice if not specified) even if this requires resizing the raw image data.
 
 ##Response
-Response Code|Description|
----|---|200 (OK)|Success|401 (Unauthorized)|Bad/Missing security token (see CitrixAuth Authentication Scheme document [3])|400 (Bad Request)|Invalid size parameter.|404|Unknown/missing thumbprint.|
-Response Format|Request Accept /Response Content-Type Header|
----|---
-GIF|image/gif|
-PNG|image/png|
+|Response Code|Description|
+|---|---||200 (OK)|Success||401 (Unauthorized)|Bad/Missing security token (see CitrixAuth Authentication Scheme document [3])||400 (Bad Request)|Invalid size parameter.||404|Unknown/missing thumbprint.|
+|Response Format|Request Accept /Response Content-Type Header|
+|---|---|
+|GIF|image/gif|
+|PNG|image/png|
 
 ###Example: Successful request for a 32x32 png image
 

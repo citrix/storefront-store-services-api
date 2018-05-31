@@ -1,4 +1,4 @@
-# Citrix StoreFront Store Services API
+#Scope
 The purpose of this document is to specify the API for the Store Services, also known as Resource Services, that are used for retrieving information about resources published from: XenApp, XenDesktop, VDI-in-a-Box, AppController, ShareFile, and other resource providers.
 
 ##Overview
