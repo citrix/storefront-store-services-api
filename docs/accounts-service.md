@@ -1,5 +1,5 @@
 #Accounts Service
-This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://<host>/Citrix/<StoreName>/ (where <host> is the single server or cluster hostname for the installation, and <StoreName> the name of the store), the accounts service has the base url http(s)://<host>/Citrix/Roaming/
+This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://&lt;host&gt;/Citrix/&lt;StoreName&gt;/ (where &lt;host&gt; is the single server or cluster hostname for the installation, and &lt;StoreName&gt; the name of the store), the accounts service has the base url http(s)://&lt;host&gt;/Citrix/Roaming/
 
 ##Request
 |URL|Method|Description|
@@ -22,7 +22,7 @@ In the case that a successful reponse is returned, the response body contains an
 	* Plug-ins are only defined at the account level.
 
 ###Content Hash
-The <contentHash> element contains a hash of the account content that can be used by the client to determine whether the content has changed. This can be used in conjunction with the summary parameter to optimize network bandwidth usage. The algorithm used to generate the hash may be changed in later revisions, so the client should not treat the contentHash as anything other than an opaque string or make assumptions about the length or format.
+The &lt;contentHash&gt; element contains a hash of the account content that can be used by the client to determine whether the content has changed. This can be used in conjunction with the summary parameter to optimize network bandwidth usage. The algorithm used to generate the hash may be changed in later revisions, so the client should not treat the contentHash as anything other than an opaque string or make assumptions about the length or format.
 
 ###Published
 Indicates whether the account is published. Published accounts are presented to the user by preference over unpublished accounts.
