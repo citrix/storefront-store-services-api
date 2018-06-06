@@ -1,5 +1,5 @@
-site_name: Citrix StoreFront Store Services API
-site_description: Citrix StoreFront Store Services API
+site_name: Citrix StoreFront Store Services API 3.0
+site_description: Citrix StoreFront Store Services API 3.0
 theme_dir: citrix-sdk
 use_directory_urls: True
 markdown_extensions:
