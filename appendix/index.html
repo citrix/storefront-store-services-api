@@ -231,17 +231,17 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <p>The resource enumeration Xml return by the resource enumeration service contains keywords and properties elements. For resources derived from XenApp, XenDesktop or VDI-in-a-Box, these values are generated from mark-up in the description field of the corresponding resource. The description field is then 'tidied up' to remove this mark-up.</p>
 <p>The keyword/property parser looks for the string KEYWORDS: (case-insensitive). If found, all text after that string is treated as keyword/property mark-up. The mark-up is made up of the following tokens separated by one or more spaces:</p>
 <ul>
-<li><property>=<value></li>
-<li><property>="<quoted-value>"</li>
-<li><keyword></li>
+<li>&lt;property&gt;=&lt;value&gt;</li>
+<li>&lt;property&gt;="&lt;quoted-value&gt;"</li>
+<li>&lt;keyword&gt;</li>
 </ul>
 <p>Where:</p>
 <ul>
-<li><property>, <value> and <keyword> are strings made up of any characters other than space, = or "</li>
-<li><quoted-value> is a string made up of any character other than "</li>
+<li>&lt;property&gt;, &lt;value&gt; and &lt;keyword&gt; are strings made up of any characters other than space, = or "</li>
+<li>&lt;quoted-value&gt; is a string made up of any character other than "</li>
 </ul>
 <p>The keywords are collected into a single list.</p>
-<p>All property entries with the same property name are collected togther to give a multiple-valued property. </p>
+<p>All property entries with the same property name are collected togther to give a multiple-valued property.</p>
 <p>Some concrete examples:</p>
 <table>
 <thead>
@@ -256,38 +256,38 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 <tr>
 <td>"My description" <br> (Basic desciption without mark-up)</td>
 <td>"My description"</td>
-<td>\<keywords/></td>
-<td>\<properties/></td>
+<td>&lt;keywords/&gt;</td>
+<td>&lt;properties/&gt;</td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: kw1 kw2 (Description with keyword mark-up)</td>
 <td>"My description"</td>
-<td>\<keywords> <br>\<keyword>kw1\</keyword> <br>\<keyword>kw2\</keyword><br> \</keywords></td>
-<td>\<properties/></td>
+<td>&lt;keywords&gt; <br>&lt;keyword&gt;kw1&lt;/keyword&gt; <br>&lt;keyword&gt;kw2&lt;/keyword&gt;<br> &lt;/keywords&gt;</td>
+<td>&lt;properties/&gt;</td>
 </tr>
 <tr>
 <td>"My description keywords: name1=a name2=b name1="the rain in Spain" (Description with keyword and property mark-up)</td>
 <td>"My description"</td>
-<td>\<keywords/></td>
-<td>\<properties><br>\<property propertyId="name1"><br>\<value>a\</value>\<value>The rain in Spain\</value> \</property>\<property propertyId="name2"><br>\<value>b\<value><br>\</property><br>\</properties></td>
+<td>&lt;keywords/&gt;</td>
+<td>&lt;properties&gt;<br>&lt;property propertyId="name1"&gt;<br>&lt;value&gt;a\&lt;/value&gt;\&lt;value&gt;The rain in Spain\&lt;/value&gt; \&lt;/property&gt;&lt;property propertyId="name2"&gt;<br>&lt;value&gt;b&lt;value&gt;<br>&lt;/property&gt;<br>&lt;/properties&gt;</td>
 </tr>
 <tr>
 <td>"My description keywords: name1=a name2=b" (Description with misformatted mark-up - a misspelled KEYWORDS: token)</td>
 <td>"My description keywrds: name1=a name2=b "</td>
-<td>\<keywords></td>
-<td>\<properties/></td>
+<td>&lt;keywords/&gt;</td>
+<td>&lt;properties/&gt;</td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: kw1 name1=a kw2 name2=b kw3" (Description with interspersed keywords and properties.)</td>
 <td>"My description"</td>
-<td>\<keywords> <br>\<keyword>kw1\</keyword> <br>\<keyword>kw2\</keyword><br>\<keyword>kw3\</keyword><br>\<keywords></td>
-<td>\<properties><br>\<property propertyId="name1"><br>\<value>a\</value> <br>\</property><br>\<property propertyId="name2"><br>\<value>b\</value><br>\</property><br>\</properties></td>
+<td>&lt;keywords&gt; <br>&lt;keyword&gt;kw1&lt;/keyword&gt; <br>&lt;keyword&gt;kw2&lt;/keyword&gt;<br>&lt;keyword&gt;kw3&lt;/keyword&gt; <br> &lt;/keywords&gt;</td>
+<td>&lt;properties&gt;<br>&lt;property propertyId="name1"&gt;<br>&lt;value&gt;a&lt;/value&gt; <br>\&lt;/property&gt;<br>&lt;property propertyId="name2"&gt;<br>&lt;value&gt;b&lt;/value&gt;<br>&lt;/property&gt;<br>&lt;/properties&gt;</td>
 </tr>
 <tr>
 <td>"My description KEYWORDS: name1=a Name1=b "(Property names are case- sensitive.)</td>
 <td>"My description"</td>
-<td>\<keywords/></td>
-<td>\<property propertyId="name1"><br>\<value>a\</value><br>\</property><br>\<property propertyId="Name1"><br>\<value>b\</value><br>\</property><br>\</properties></td>
+<td>&lt;keywords/&gt;</td>
+<td>&lt;property propertyId="name1"&gt;<br>&lt;value&gt;a&lt;/value&gt;<br>&lt;/property&gt;<br>&lt;property propertyId="Name1"&gt;<br>&lt;value&gt;b&lt;/value&gt;<br>&lt;/property&gt;<br>&lt;/properties&gt;</td>
 </tr>
 </tbody>
 </table> 

@@ -236,7 +236,7 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
                   </div>
                   </div>
                    <h1 id="accounts-service"><a class="toclink" href="#accounts-service">Accounts Service</a></h1>
-<p>This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://<host>/Citrix/<StoreName>/ (where <host> is the single server or cluster hostname for the installation, and <StoreName> the name of the store), the accounts service has the base url http(s)://<host>/Citrix/Roaming/</p>
+<p>This service is not specific to a particular store, but spans all stores in an installation. Whereas each store has a base url of http(s)://&lt;host&gt;/Citrix/&lt;StoreName&gt;/ (where &lt;host&gt; is the single server or cluster hostname for the installation, and &lt;StoreName&gt; the name of the store), the accounts service has the base url http(s)://&lt;host&gt;/Citrix/Roaming/</p>
 <h2 id="request"><a class="toclink" href="#request">Request</a></h2>
 <table>
 <thead>
@@ -286,7 +286,7 @@ https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
 </li>
 </ul>
 <h3 id="content-hash"><a class="toclink" href="#content-hash">Content Hash</a></h3>
-<p>The <contentHash> element contains a hash of the account content that can be used by the client to determine whether the content has changed. This can be used in conjunction with the summary parameter to optimize network bandwidth usage. The algorithm used to generate the hash may be changed in later revisions, so the client should not treat the contentHash as anything other than an opaque string or make assumptions about the length or format.</p>
+<p>The &lt;contentHash&gt; element contains a hash of the account content that can be used by the client to determine whether the content has changed. This can be used in conjunction with the summary parameter to optimize network bandwidth usage. The algorithm used to generate the hash may be changed in later revisions, so the client should not treat the contentHash as anything other than an opaque string or make assumptions about the length or format.</p>
 <h3 id="published"><a class="toclink" href="#published">Published</a></h3>
 <p>Indicates whether the account is published. Published accounts are presented to the user by preference over unpublished accounts.</p>
 <p><strong>Note</strong>: The xs:boolean type allows ‘true’/’false’ or, equivalently, ‘1’/’0’ values to be used so clients should parse both correctly.</p>
