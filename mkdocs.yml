@@ -2,6 +2,7 @@
 site_name: Citrix StoreFront Store Services API 3.0
 site_description: Citrix StoreFront Store Services API 3.0
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
@@ -71,3 +72,4 @@ nav:
 - Discovery Service: discovery-service.md
 - Accounts Service: accounts-service.md
 - Appendix: appendix.md
+- Questions?: https://discussions.citrix.com/forum/1385-citrix-developer-exchange/
