@@ -20,7 +20,4 @@ Additionally there are end-point, account and discovery services to aid the clie
 
 [2] HTTP Authentication: Basic and Digest Access Authentication: [http://www.ietf.org/rfc/rfc2617.txt](http://www.ietf.org/rfc/rfc2617.txt)
 
-[3] CitrixAuth Authentication Scheme v1.
-
-
-
+[3] [CitrixAuth Authentication Scheme v1](https://developer-docs.citrix.com/projects/storefront-authentication-sdk/en/latest/citrixauth-authentication-scheme)
